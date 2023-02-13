@@ -26,3 +26,14 @@ Interstate.Ticket.remove = function (key)
 
     });
 };
+
+Interstate.Ticket.edit = function (key)
+{
+    API.request('Interstate.Ticket.Edit', {
+        'key': key
+    }, function (data) {
+        $('#page').html(data.render);
+    }, function () {
+
+    });
+};

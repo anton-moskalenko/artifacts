@@ -20,6 +20,7 @@ class Tree
         $manager->add(new Method('Interstate.Ticket.Collection', '\Liloi\Interstate\API\Ticket\Collection\Method::execute'));
         $manager->add(new Method('Interstate.Ticket.Create', '\Liloi\Interstate\API\Ticket\Create\Method::execute'));
         $manager->add(new Method('Interstate.Ticket.Remove', '\Liloi\Interstate\API\Ticket\Remove\Method::execute'));
+        $manager->add(new Method('Interstate.Ticket.Edit', '\Liloi\Interstate\API\Ticket\Edit\Method::execute'));
 
         self::$manager = $manager;
     }
