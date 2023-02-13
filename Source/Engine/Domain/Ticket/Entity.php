@@ -83,6 +83,11 @@ class Entity extends AbstractEntity
         return $this->getField('type');
     }
 
+    public function getTypeString(): string
+    {
+        return Types::$list[$this->getType()];
+    }
+
     public function setType(string $value): void
     {
         // @todo Extract param names to const.
