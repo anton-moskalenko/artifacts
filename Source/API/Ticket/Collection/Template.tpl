@@ -4,6 +4,7 @@
         <th>Date</th>
         <th>Start</th>
         <th>Finish</th>
+        <th>Period</th>
         <th>Status</th>
         <th>Type</th>
         <th style="text-align: right;">Actions</th>
@@ -14,6 +15,7 @@
         <td><?php echo $entity->getDate(); ?></td>
         <td><?php echo $entity->getStartTime(); ?></td>
         <td><?php echo $entity->getFinishTime(); ?></td>
+        <td><?php echo $entity->getPeriod(); ?></td>
         <td><?php echo $entity->getStatusString(); ?></td>
         <td><?php echo $entity->getTypeString(); ?></td>
         <td style="text-align: right;">
