@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\Interstate\API\Ticket\Edit;
+namespace Liloi\Interstate\API\Ticket\Save;
 
 use Liloi\API\Response;
 use Liloi\Interstate\API\Method as SuperMethod;

@@ -13,7 +13,7 @@
     <body>
         <div id="menu">
             <div id="major">
-                <a href="javascript:void(0)" onclick="Interstate.Ticket.Create();">Create new ticket</a>
+                <a href="javascript:void(0)" onclick="Interstate.Ticket.create();">Create new ticket</a>
             </div>
             <div id="minor">
             </div>
