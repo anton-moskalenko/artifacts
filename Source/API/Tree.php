@@ -17,7 +17,7 @@ class Tree
         $manager = new Manager();
 
         // @todo: add automatic API method collect.
-//        $manager->add(new Method('Artifact.Map.Get', '\Liloi\Interstate\API\Map\Get\Method::execute'));
+        $manager->add(new Method('Interstate.Ticket.Collection', '\Liloi\Interstate\API\Map\Get\Method::execute'));
 
         self::$manager = $manager;
     }
