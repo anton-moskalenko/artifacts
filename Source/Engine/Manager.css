@@ -1,0 +1,61 @@
+/* @todo: add LESS language */
+
+html,
+body
+{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: monospace;
+}
+
+h1,h2,h3,h4,h5
+{
+    margin: 0;
+    /*text-align: center;*/
+}
+
+table th,
+table td {
+    text-align: left;
+    vertical-align: top;
+}
+
+a
+{
+    color: red;
+    text-decoration: none;
+}
+
+#menu
+{
+    height: 100px;
+    width: 100%;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(190,190,190,1) 100%);
+    text-align: center;
+    font-size: xx-large;
+}
+
+#bar
+{
+    height: 20px;
+    width: 100%;
+    position:fixed;
+    bottom:0;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(190,190,190,1) 0%, rgba(255,255,255,1) 100%);
+    text-align: center;
+    font-size: large;
+}
+
+#page
+{
+    height: 80%;
+    overflow-y: scroll;
+}
+
+#minor
+{
+    font-size: large;
+}
