@@ -9,7 +9,7 @@
         <th style="text-align: right;">Actions</th>
     </tr>
     <?php foreach($collection as $entity): ?>
-    <tr>
+    <tr class="<?php echo $entity->getStatusClass(); ?>">
         <td><?php echo $entity->getTitle(); ?></td>
         <td><?php echo $entity->getDate(); ?></td>
         <td><?php echo $entity->getStartTime(); ?></td>

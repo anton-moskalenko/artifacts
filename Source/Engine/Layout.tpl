@@ -8,7 +8,7 @@
         <script><?php echo file_get_contents(ROOT_DIR . '/vendor/anton-moskalenko/rune-api/Client/API.js'); ?></script>
         <script><?php echo file_get_contents(ROOT_DIR . '/Source/API/Ticket/Requests.js'); ?></script>
         <style><?php echo file_get_contents(ROOT_DIR . '/Source/Engine/Manager.css'); ?></style>
-        <title>Interstate - <?php echo date('Y-m-d'); ?></title>
+        <title>Interstate - <?php echo date('Y-m-d H:i:s'); ?></title>
     </head>
     <body>
         <div id="menu">
