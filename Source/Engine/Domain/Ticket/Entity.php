@@ -69,7 +69,7 @@ class Entity extends AbstractEntity
 
     public function getStatusString(): string
     {
-        return Status::$list[$this->getStatus()];
+        return Statuses::$list[$this->getStatus()];
     }
 
     public function setStatus(string $value): void

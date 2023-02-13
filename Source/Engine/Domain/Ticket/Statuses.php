@@ -2,7 +2,7 @@
 
 namespace Liloi\Interstate\Engine\Domain\Ticket;
 
-class Status
+class Statuses
 {
     public const IN_HAND = 1;
     public const SUCCESS = 2;
