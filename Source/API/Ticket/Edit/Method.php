@@ -6,6 +6,7 @@ use Liloi\API\Response;
 use Liloi\Interstate\API\Method as SuperMethod;
 use Liloi\Interstate\Engine\Domain\Ticket\Manager;
 use Liloi\Interstate\Engine\Domain\Ticket\Statuses;
+use Liloi\Interstate\Engine\Domain\Ticket\Types;
 
 class Method extends SuperMethod
 {
@@ -15,7 +16,9 @@ class Method extends SuperMethod
         $response = new Response();
 
         $response->set('render', static::render(__DIR__ . '/Template.tpl', [
-            'entity' => $entity
+            'entity' => $entity,
+            'statuses' => Statuses::$list,
+            'types' => Types::$list
         ]));
 
         return $response;
