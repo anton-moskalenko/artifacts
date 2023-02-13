@@ -3,15 +3,14 @@
 namespace Liloi\Interstate\API\Ticket\Collection;
 
 use Liloi\API\Response;
-use Liloi\Artifact\API\Method as SuperMethod;
-use Liloi\Artifact\Engine\Domain\Artifact\Manager;
+use Liloi\Interstate\API\Method as SuperMethod;
+use Liloi\Interstate\Engine\Domain\Ticket\Manager;
 
 class Method extends SuperMethod
 {
     public static function execute(): Response
     {
-        $key_rune = self::getParameter('key_rune');
-        $collection_artifact = Manager::loadCollection($key_rune);
+        $collection_artifact = Manager::loadCollection();
 
         $response = new Response();
 

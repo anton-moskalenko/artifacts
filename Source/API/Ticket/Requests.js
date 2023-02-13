@@ -1,6 +1,6 @@
 Interstate.Ticket = {};
 
-Interstate.Ticket.Collection = function (key_rune)
+Interstate.Ticket.Collection = function ()
 {
     API.request('Interstate.Ticket.Collection', {
     }, function (data) {

@@ -12,14 +12,13 @@ class Manager extends DomainManager
         return self::getTablePrefix() . 'tickets';
     }
 
-    public static function loadCollection($key_map): Collection
+    public static function loadCollection(): Collection
     {
         $name = self::getTableName();
 
         $rows = self::getAdapter()->getArray(sprintf(
-            'select * from %s where key_rune="%s" order by key_artifact asc;',
-            $name,
-            $key_map
+            'select * from %s order by key_ticket desc;',
+            $name
         ));
 
         $collection = new Collection();
