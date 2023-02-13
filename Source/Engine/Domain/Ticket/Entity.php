@@ -67,6 +67,11 @@ class Entity extends AbstractEntity
         return $this->getField('status');
     }
 
+    public function getStatusString(): string
+    {
+        return Status::$list[$this->getStatus()];
+    }
+
     public function setStatus(string $value): void
     {
         // @todo Extract param names to const.
