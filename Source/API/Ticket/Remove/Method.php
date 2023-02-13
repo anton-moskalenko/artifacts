@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\Interstate\API\Ticket\Create;
+namespace Liloi\Interstate\API\Ticket\Remove;
 
 use Liloi\API\Response;
 use Liloi\Interstate\API\Method as SuperMethod;
