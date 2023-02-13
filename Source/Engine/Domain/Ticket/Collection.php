@@ -23,7 +23,8 @@ class Collection extends AbstractCollection
         $hours = (int)($total / 3600);
         $minutes = (int)(($total % 3600) / 60);
         $seconds = (int)(($total % 3600) % 60);
+        $percent = (int)(100 * ($hours / 24));
 
-        return sprintf('(%s) %s:%s:%s', $total, $hours, $minutes, $seconds);
+        return sprintf('(%s) %s:%s:%s (%s%%)', $total, $hours, $minutes, $seconds, $percent);
     }
 }
