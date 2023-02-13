@@ -16,7 +16,7 @@ class Manager extends DomainManager
         $name = self::getTableName();
 
         $rows = self::getAdapter()->getArray(sprintf(
-            'select * from %s order by key_ticket desc limit 100;',
+            'select * from %s where status in (1,2,3) order by key_ticket desc limit 100;',
             $name
         ));
 
