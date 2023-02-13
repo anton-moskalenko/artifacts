@@ -2,8 +2,7 @@
 
 namespace Liloi\Interstate\Engine\Domain\Ticket;
 
-use Liloi\Road\Library\Data\Adapter;
-use Liloi\Artifact\Engine\Domain\Manager as DomainManager;
+use Liloi\Interstate\Engine\Domain\Manager as DomainManager;
 
 class Manager extends DomainManager
 {
