@@ -13,7 +13,7 @@
     <body>
         <div id="menu">
             <div id="major">
-                <!--<a href="javascript:void(0)" onclick="Artifact.Map.Edit();">Edit plan point</a>-->
+                <a href="javascript:void(0)" onclick="Interstate.Ticket.Create();">Create new ticket</a>
             </div>
             <div id="minor">
             </div>

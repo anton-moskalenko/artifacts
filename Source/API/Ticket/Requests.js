@@ -10,3 +10,19 @@ Interstate.Ticket.Collection = function ()
 
     });
 };
+
+Interstate.Ticket.Create = function ()
+{
+    if(!confirm('Are you sure?'))
+    {
+        return;
+    }
+
+    API.request('Interstate.Ticket.Create', {
+        'debug': true
+    }, function (data) {
+        Interstate.Ticket.Collection();
+    }, function () {
+
+    });
+};

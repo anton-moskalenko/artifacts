@@ -16,7 +16,7 @@ class Manager extends DomainManager
         $name = self::getTableName();
 
         $rows = self::getAdapter()->getArray(sprintf(
-            'select * from %s order by key_ticket desc;',
+            'select * from %s order by key_ticket desc limit 100;',
             $name
         ));
 
@@ -59,17 +59,15 @@ class Manager extends DomainManager
     }
 
     // @todo: rise this method to more abstract level.
-    public static function create(string $keyMap): void
+    public static function create(): void
     {
         $row = [
             'title' => 'Enter the title',
-            'summary' => 'Enter the summary',
+            'start' => date('Y-m-d H:-i:s'),
+            'finish' => date('Y-m-d H:-i:s'),
             'status' => '1',
             'type' => '1',
-            'local' => '-',
-            'global' => '-',
             'data' => '{}',
-            'key_rune' => $keyMap
         ];
 
         $name = self::getTableName();
