@@ -30,6 +30,16 @@ class Entity extends AbstractEntity
         return date('Y-m-d', strtotime($this->getStart()));
     }
 
+    public function getStartTime(): string
+    {
+        return date('H:i:s', strtotime($this->getStart()));
+    }
+
+    public function getFinishTime(): string
+    {
+        return date('H:i:s', strtotime($this->getFinish()));
+    }
+
     public function getStart(): string
     {
         return $this->getField('start');
