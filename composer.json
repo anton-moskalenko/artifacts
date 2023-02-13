@@ -1,0 +1,18 @@
+{
+    "name": "anton-moskalenko/interstate",
+    "keywords": [
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "anton-moskalenko/rune-framework": "dev-main",
+        "anton-moskalenko/rune-config": "dev-main",
+        "anton-moskalenko/rune-api": "dev-main",
+        "anton-moskalenko/rune-tools": "dev-main",
+        "anton-moskalenko/judex": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Liloi\\Interstate\\": "Source"
+        }
+    }
+}
