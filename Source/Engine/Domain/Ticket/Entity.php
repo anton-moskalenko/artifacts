@@ -115,6 +115,19 @@ class Entity extends AbstractEntity
         $this->data['data'] = $value;
     }
 
+    public function getPeriod(): string
+    {
+        $date1 = new \DateTime($this->getStart());
+        $date2 = new \DateTime($this->getFinish());
+        $interval = $date1->diff($date2);
+        return $interval->format("%h:%i:%s");
+    }
+
+    public function getPeriodUnix(): int
+    {
+        return strtotime($this->getFinish()) - strtotime($this->getStart());
+    }
+
     public function save(): void
     {
         Manager::save($this);

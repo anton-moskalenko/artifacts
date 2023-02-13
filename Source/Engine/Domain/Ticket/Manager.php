@@ -16,8 +16,10 @@ class Manager extends DomainManager
         $name = self::getTableName();
 
         $rows = self::getAdapter()->getArray(sprintf(
-            'select * from %s where status in (1,2,3) order by key_ticket desc limit 100;',
-            $name
+            'select * from %s where status in (1,2,3) and start between "%s" and "%s" order by key_ticket desc limit 100;',
+            $name,
+            date('Y-m-d 00:00:00'),
+            date('Y-m-d 23:59:59'),
         ));
 
         $collection = new Collection();
