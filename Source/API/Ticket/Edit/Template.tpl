@@ -7,8 +7,14 @@
             <th>Value</th>
         </tr>
         <tr><td>Title</td><td><input type="text" name="title" value="<?php echo $entity->getTitle(); ?>"/></td></tr>
-        <tr><td>Start</td><td><input type="text" name="start" value="<?php echo $entity->getStart(); ?>"/></td></tr>
-        <tr><td>Finish</td><td><input type="text" name="finish" value="<?php echo $entity->getFinish(); ?>"/></td></tr>
+        <tr><td>Start</td><td>
+            <input type="text" name="start" value="<?php echo $entity->getStart(); ?>"/>
+            <a href="javascript:void(0)" onclick="$('[name=start]').val('<?php echo date('Y-m-d H:i:s'); ?>');">Now</a>
+        </td></tr>
+        <tr><td>Finish</td><td>
+            <input type="text" name="finish" value="<?php echo $entity->getFinish(); ?>"/>
+            <a href="javascript:void(0)" onclick="$('[name=finish]').val('<?php echo date('Y-m-d H:i:s'); ?>');">Now</a>
+        </td></tr>
         <tr><td>Type</td><td>
             <select name="type">
                 <?php foreach($types as $key => $value): ?>
