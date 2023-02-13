@@ -35,7 +35,7 @@ class Manager extends DomainManager
         $name = self::getTableName();
 
         $row = self::getAdapter()->getRow(sprintf(
-            'select * from %s where key_artifact="%s"',
+            'select * from %s where key_ticket="%s"',
             $name, $key
         ));
 
@@ -48,13 +48,13 @@ class Manager extends DomainManager
         $data = $entity->get();
 
         // @todo: Get param name from const.
-        $key = $data['key_artifact'];
-        unset($data['key_artifact']);
+        $key = $data['key_ticket'];
+        unset($data['key_ticket']);
 
         self::getAdapter()->update(
             $name,
             $data,
-            sprintf('key_artifact = "%s"', $key)
+            sprintf('key_ticket = "%s"', $key)
         );
     }
 
