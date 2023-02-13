@@ -72,6 +72,11 @@ class Entity extends AbstractEntity
         return Statuses::$list[$this->getStatus()];
     }
 
+    public function getStatusClass(): string
+    {
+        return str_replace(' ', '-', strtolower($this->getStatusString()));
+    }
+
     public function setStatus(string $value): void
     {
         // @todo Extract param names to const.
@@ -86,6 +91,11 @@ class Entity extends AbstractEntity
     public function getTypeString(): string
     {
         return Types::$list[$this->getType()];
+    }
+
+    public function getTypeClass(): string
+    {
+        return str_replace(' ', '-', strtolower($this->getTypeString()));
     }
 
     public function setType(string $value): void
