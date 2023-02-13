@@ -25,6 +25,11 @@ class Entity extends AbstractEntity
         $this->data['title'] = $value;
     }
 
+    public function getDate(): string
+    {
+        return date('Y-m-d', strtotime($this->getStart()));
+    }
+
     public function getStart(): string
     {
         return $this->getField('start');
