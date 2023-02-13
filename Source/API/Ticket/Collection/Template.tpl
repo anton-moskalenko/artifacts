@@ -25,3 +25,5 @@
     </tr>
     <?php endforeach; ?>
 </table>
+<hr/>
+<h3>Today's total: <?php echo $collection->getPeriod(); ?></h3>

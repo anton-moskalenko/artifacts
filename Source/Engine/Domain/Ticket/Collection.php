@@ -11,4 +11,19 @@ use Liloi\Tools\Collection as AbstractCollection;
  */
 class Collection extends AbstractCollection
 {
+    public function getPeriod(): string
+    {
+        $total = 0;
+
+        foreach($this as $entity)
+        {
+            $total += $entity->getPeriodUnix();
+        }
+
+        $hours = (int)($total / 3600);
+        $minutes = (int)(($total % 3600) / 60);
+        $seconds = (int)(($total % 3600) % 60);
+
+        return sprintf('(%s) %s:%s:%s', $total, $hours, $minutes, $seconds);
+    }
 }

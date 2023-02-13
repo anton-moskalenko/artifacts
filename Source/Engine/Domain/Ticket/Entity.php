@@ -123,6 +123,11 @@ class Entity extends AbstractEntity
         return $interval->format("%h:%i:%s");
     }
 
+    public function getPeriodUnix(): int
+    {
+        return strtotime($this->getFinish()) - strtotime($this->getStart());
+    }
+
     public function save(): void
     {
         Manager::save($this);
