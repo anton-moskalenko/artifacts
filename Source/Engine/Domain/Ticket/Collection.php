@@ -27,4 +27,16 @@ class Collection extends AbstractCollection
 
         return sprintf('(%s) %s:%s:%s (%s%%)', $total, $hours, $minutes, $seconds, $percent);
     }
+
+    public function group(): array
+    {
+        $list = array_combine(array_keys(Types::$list), [0,0,0,0,0,0,0]);
+
+        foreach($this as $entity)
+        {
+            $list[$entity->getType()]++;
+        }
+
+        return $list;
+    }
 }
