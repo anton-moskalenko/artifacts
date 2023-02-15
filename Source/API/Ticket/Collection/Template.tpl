@@ -1,3 +1,11 @@
+<hr/>
+<div style="text-align: center">
+    <h3>Today's total time: <?php echo $collection->getPeriod(); ?></h3>
+    <?php foreach($collection->group() as $type => $count): ?>
+    <?php echo $types[$type]; ?>: <?php echo $count; ?>
+    <?php endforeach; ?>
+</div>
+<hr/>
 <table style="width: 100%;">
     <tr>
         <th>Title</th>
@@ -25,5 +33,3 @@
     </tr>
     <?php endforeach; ?>
 </table>
-<hr/>
-<h3>Today's total: <?php echo $collection->getPeriod(); ?></h3>

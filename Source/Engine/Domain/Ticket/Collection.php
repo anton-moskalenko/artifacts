@@ -20,11 +20,25 @@ class Collection extends AbstractCollection
             $total += $entity->getPeriodUnix();
         }
 
+        $all_minute = $total / 60;
+
         $hours = (int)($total / 3600);
         $minutes = (int)(($total % 3600) / 60);
         $seconds = (int)(($total % 3600) % 60);
-        $percent = (int)(100 * ($hours / 24));
+        $percent = (int)(100 * ($all_minute / (24 * 60)));
 
         return sprintf('(%s) %s:%s:%s (%s%%)', $total, $hours, $minutes, $seconds, $percent);
+    }
+
+    public function group(): array
+    {
+        $list = array_combine(array_keys(Types::$list), [0,0,0,0,0,0,0]);
+
+        foreach($this as $entity)
+        {
+            $list[$entity->getType()]++;
+        }
+
+        return $list;
     }
 }
