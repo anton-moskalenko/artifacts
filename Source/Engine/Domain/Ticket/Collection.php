@@ -51,6 +51,13 @@ class Collection extends AbstractCollection
             $group[str_pad($i, 2, '0', STR_PAD_LEFT)] = [];
         }
 
+        /** @var Entity $entity */
+        foreach($this as $entity)
+        {
+            $hour = date('H', strtotime($entity->getStart()));
+            $group[$hour][] = $entity;
+        }
+
         return $group;
     }
 }
