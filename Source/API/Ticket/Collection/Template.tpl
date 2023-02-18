@@ -1,3 +1,9 @@
+<style>
+    .table-tickets td
+    {
+        width: 12%;
+    }
+</style>
 <hr/>
 <div style="text-align: center">
     <h3>Today's total time: <?php echo $collection->getPeriod(); ?></h3>
@@ -16,7 +22,7 @@
         <td><?php echo $time; ?>:00</td>
         <td>
             <?php if(!empty($lesson)): ?>
-                <table style="width: 100%;">
+                <table style="width: 100%;" class="table-tickets">
                     <tr>
                         <th>Title</th>
                         <th>Date</th>
