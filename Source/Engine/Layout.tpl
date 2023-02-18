@@ -16,6 +16,8 @@
                 <a href="javascript:void(0)" onclick="Interstate.Ticket.create();">Create new ticket</a>
             </div>
             <div id="minor">
+                <input type="date" id="current-date" value="<?php echo gmdate("Y-m-d"); ?>">
+                <a href="javascript:void(0)" onclick="Interstate.Ticket.Collection($('#current-date').val());">Check</a>
             </div>
         </div>
         <div id="page"></div>
