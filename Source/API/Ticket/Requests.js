@@ -21,7 +21,7 @@ Interstate.Ticket.create = function ()
     API.request('Interstate.Ticket.Create', {
         'debug': true
     }, function (data) {
-        Interstate.Ticket.Collection();
+        Interstate.Ticket.Collection($('#current-date').val());
     }, function () {
 
     });
@@ -37,7 +37,7 @@ Interstate.Ticket.remove = function (key)
     API.request('Interstate.Ticket.Remove', {
         'key': key
     }, function (data) {
-        Interstate.Ticket.Collection();
+        Interstate.Ticket.Collection($('#current-date').val());
     }, function () {
 
     });
@@ -71,7 +71,7 @@ Interstate.Ticket.save = function (key)
         'type': jq_block.find('[name="type"]').val(),
         'data': '{}'
     }, function (data) {
-        Interstate.Ticket.Collection();
+        Interstate.Ticket.Collection($('#current-date').val());
     }, function () {
 
     });
