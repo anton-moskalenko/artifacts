@@ -65,8 +65,8 @@ class Manager extends DomainManager
     {
         $row = [
             'title' => 'Enter the title',
-            'start' => date('Y-m-d H:-i:s'),
-            'finish' => date('Y-m-d H:-i:s'),
+            'start' => gmdate('Y-m-d H:-i:s'),
+            'finish' => gmdate('Y-m-d H:-i:s'),
             'status' => '1',
             'type' => '1',
             'data' => '{}',
