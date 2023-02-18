@@ -11,15 +11,20 @@ class Manager extends DomainManager
         return self::getTablePrefix() . 'tickets';
     }
 
-    public static function loadCollection(): Collection
+    public static function loadCollection(?string $dt = null): Collection
     {
+        if(is_null($dt))
+        {
+            $dt = date('Y-m-d 00:00:00');
+        }
+
         $name = self::getTableName();
 
         $rows = self::getAdapter()->getArray(sprintf(
             'select * from %s where status in (1,2,3) and start between "%s" and "%s" order by key_ticket desc limit 100;',
             $name,
-            date('Y-m-d 00:00:00'),
-            date('Y-m-d 23:59:59'),
+            date('Y-m-d 00:00:00', strtotime($dt)),
+            date('Y-m-d 23:59:59', strtotime($dt)),
         ));
 
         $collection = new Collection();
