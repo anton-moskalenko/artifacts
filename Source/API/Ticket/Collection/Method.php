@@ -17,6 +17,7 @@ class Method extends SuperMethod
 
         $response->set('render', static::render(__DIR__ . '/Template.tpl', [
             'collection' => $collection_artifact,
+            'group' => $collection_artifact->group(),
             'types' => Types::$list
         ]));
 

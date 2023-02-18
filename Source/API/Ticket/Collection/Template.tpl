@@ -33,3 +33,18 @@
     </tr>
     <?php endforeach; ?>
 </table>
+<hr/>
+<table style="width: 100%;">
+    <tr>
+        <th>Time</th>
+        <th>Lesson</th>
+    </tr>
+    <?php foreach($group as $time => $lesson): ?>
+    <tr>
+        <td><?php echo $time; ?>:00</td>
+        <td>
+
+        </td>
+    </tr>
+    <?php endforeach; ?>
+</table>

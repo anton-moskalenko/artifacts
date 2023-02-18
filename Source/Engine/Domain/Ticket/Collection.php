@@ -41,4 +41,16 @@ class Collection extends AbstractCollection
 
         return $list;
     }
+
+    public function group(): array
+    {
+        $group = [];
+
+        for($i=0;$i<24;$i++)
+        {
+            $group[str_pad($i, 2, '0', STR_PAD_LEFT)] = [];
+        }
+
+        return $group;
+    }
 }
