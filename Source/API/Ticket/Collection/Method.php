@@ -11,7 +11,8 @@ class Method extends SuperMethod
 {
     public static function execute(): Response
     {
-        $collection_artifact = Manager::loadCollection();
+        $dt = self::getParameter('dt');
+        $collection_artifact = Manager::loadCollection($dt);
 
         $response = new Response();
 

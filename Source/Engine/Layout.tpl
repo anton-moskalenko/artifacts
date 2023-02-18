@@ -23,7 +23,7 @@
 
         </div>
         <script>
-            Interstate.Ticket.Collection();
+            Interstate.Ticket.Collection('<?php echo gmdate("Y-m-d"); ?>');
         </script>
     </body>
 </html>
