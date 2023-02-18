@@ -1,7 +1,7 @@
 <hr/>
 <div style="text-align: center">
     <h3>Today's total time: <?php echo $collection->getPeriod(); ?></h3>
-    <?php foreach($collection->group() as $type => $count): ?>
+    <?php foreach($collection->groupCount() as $type => $count): ?>
     <?php echo $types[$type]; ?>: <?php echo $count; ?>
     <?php endforeach; ?>
 </div>
