@@ -20,7 +20,14 @@
                 <a href="javascript:void(0)" onclick="Interstate.Ticket.Collection($('#current-date').val());">Check</a>
             </div>
         </div>
-        <div id="page"></div>
+
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 50%;"><div id="page"></div></td>
+                <td></td>
+            </tr>
+        </table>
+
         <div id="bar">
 
         </div>
