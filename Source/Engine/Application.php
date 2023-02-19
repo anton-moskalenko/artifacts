@@ -1,8 +1,8 @@
 <?php
 
-namespace Liloi\Interstate\Engine;
+namespace Liloi\Rune\Engine;
 
-use Liloi\Interstate\API\Tree;
+use Liloi\Rune\API\Tree;
 
 /**
  * @inheritDoc

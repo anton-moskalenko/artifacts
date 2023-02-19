@@ -1,10 +1,10 @@
 <?php
 
-namespace Liloi\Interstate\API\Ticket\Create;
+namespace Liloi\Rune\API\Ticket\Create;
 
 use Liloi\API\Response;
-use Liloi\Interstate\API\Method as SuperMethod;
-use Liloi\Interstate\Engine\Domain\Ticket\Manager;
+use Liloi\Rune\API\Method as SuperMethod;
+use Liloi\Rune\Engine\Domain\Ticket\Manager;
 
 class Method extends SuperMethod
 {

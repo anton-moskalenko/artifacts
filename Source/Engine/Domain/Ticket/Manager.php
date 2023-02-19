@@ -1,8 +1,8 @@
 <?php
 
-namespace Liloi\Interstate\Engine\Domain\Ticket;
+namespace Liloi\Rune\Engine\Domain\Ticket;
 
-use Liloi\Interstate\Engine\Domain\Manager as DomainManager;
+use Liloi\Rune\Engine\Domain\Manager as DomainManager;
 
 class Manager extends DomainManager
 {

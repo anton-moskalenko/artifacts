@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\Interstate\Engine\Domain\Ticket;
+namespace Liloi\Rune\Engine\Domain\Ticket;
 
 class Statuses
 {
