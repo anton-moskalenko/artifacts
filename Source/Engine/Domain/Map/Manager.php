@@ -13,7 +13,7 @@ class Manager extends DomainManager
 
     public static function load(string $url): Entity
     {
-        $url = str_replace("/blueprint", "", $url); // Temporary solution
+//        $url = str_replace("/blueprint", "", $url); // Temporary solution
         $name = self::getTableName();
 
         $row = self::getAdapter()->getRow(sprintf(

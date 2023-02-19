@@ -14,7 +14,8 @@
     <body>
         <div id="menu">
             <div id="major">
-                <a href="javascript:void(0)" onclick="Interstate.Ticket.create();">Create new ticket</a>
+                <a href="javascript:void(0)" onclick="Interstate.Ticket.create();">Create new ticket</a> &diams;
+                <a href="javascript:void(0)" onclick="Artifact.Map.Edit();">Edit plan point</a>
             </div>
             <div id="minor">
                 <input type="date" id="current-date" value="<?php echo gmdate("Y-m-d"); ?>">

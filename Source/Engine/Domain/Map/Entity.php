@@ -67,7 +67,7 @@ class Entity extends AbstractEntity
     public function getParse(): string
     {
         $parse = Parser::parseString($this->getProgram());
-        $parse = str_replace("href='", "href='/blueprint", $parse); // Temporary solution
+//        $parse = str_replace("href='", "href='/blueprint", $parse); // Temporary solution
         return $parse;
     }
 
