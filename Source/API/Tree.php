@@ -23,6 +23,10 @@ class Tree
         $manager->add(new Method('Interstate.Ticket.Edit', '\Liloi\Rune\API\Ticket\Edit\Method::execute'));
         $manager->add(new Method('Interstate.Ticket.Save', '\Liloi\Rune\API\Ticket\Save\Method::execute'));
 
+        $manager->add(new Method('Artifact.Map.Get', '\Liloi\Rune\API\Map\Get\Method::execute'));
+        $manager->add(new Method('Artifact.Map.Edit', '\Liloi\Rune\API\Map\Edit\Method::execute'));
+        $manager->add(new Method('Artifact.Map.Save', '\Liloi\Rune\API\Map\Save\Method::execute'));
+
         self::$manager = $manager;
     }
 
