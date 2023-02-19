@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\Interstate\Engine\Domain\Ticket;
+namespace Liloi\Rune\Engine\Domain\Ticket;
 
 use Liloi\Tools\Collection as AbstractCollection;
 
