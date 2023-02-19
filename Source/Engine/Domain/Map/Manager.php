@@ -2,7 +2,7 @@
 
 namespace Liloi\Rune\Engine\Domain\Map;
 
-use Liloi\Artifact\Engine\Domain\Manager as DomainManager;
+use Liloi\Rune\Engine\Domain\Manager as DomainManager;
 
 class Manager extends DomainManager
 {

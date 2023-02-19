@@ -8,7 +8,8 @@
         "anton-moskalenko/rune-config": "dev-main",
         "anton-moskalenko/rune-api": "dev-main",
         "anton-moskalenko/rune-tools": "dev-main",
-        "anton-moskalenko/judex": "dev-master"
+        "anton-moskalenko/judex": "dev-master",
+        "anton-moskalenko/stylo": "dev-main"
     },
     "autoload": {
         "psr-4": {
