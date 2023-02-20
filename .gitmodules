@@ -1,0 +1,3 @@
+[submodule "Manual"]
+	path = Manual
+	url = ../nexus.wiki.git
