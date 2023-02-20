@@ -34,7 +34,7 @@ class Entity extends AbstractEntity
 
     public function getKey(): string
     {
-        return $this->getField('key_rune');
+        return $this->getField('key_url');
     }
 
     public function getURL(): string

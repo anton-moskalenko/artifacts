@@ -17,14 +17,14 @@ class Manager extends DomainManager
         $name = self::getTableName();
 
         $row = self::getAdapter()->getRow(sprintf(
-            'select * from %s where url="%s"',
+            'select * from %s where key_url="%s"',
             $name, $url
         ));
 
         if(!$row)
         {
             $row = [
-                'url' => $url,
+                'key_url' => $url,
                 'title' => 'Enter the title',
                 'program' => '// Enter the program'
             ];
@@ -41,13 +41,13 @@ class Manager extends DomainManager
         $data = $entity->get();
 
         // @todo: Get param name from const.
-        $key = $data['key_rune'];
-        unset($data['key_rune']);
+        $key = $data['key_url'];
+        unset($data['key_url']);
 
         self::getAdapter()->update(
             $name,
             $data,
-            sprintf('key_rune = "%s"', $key)
+            sprintf('key_url = "%s"', $key)
         );
     }
 

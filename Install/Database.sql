@@ -11,3 +11,11 @@ create table interstate_tickets
         primary key (key_ticket)
 );
 
+create table rune_map
+(
+    key_url varchar(250) not null,
+    title varchar(250) not null,
+    program text not null,
+    constraint rune_map_pk
+        primary key (key_url)
+);
