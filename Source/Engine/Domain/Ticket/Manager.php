@@ -21,7 +21,7 @@ class Manager extends DomainManager
         $name = self::getTableName();
 
         $rows = self::getAdapter()->getArray(sprintf(
-            'select * from %s where status in (1,2,3) and start between "%s" and "%s" order by key_ticket desc limit 100;',
+            'select * from %s where status in (1,2,3,5) and start between "%s" and "%s" order by key_ticket desc limit 100;',
             $name,
             date('Y-m-d 00:00:00', strtotime($dt)),
             date('Y-m-d 23:59:59', strtotime($dt)),
@@ -72,7 +72,7 @@ class Manager extends DomainManager
             'title' => 'Enter the title',
             'start' => gmdate('Y-m-d H:-i:s'),
             'finish' => gmdate('Y-m-d H:-i:s'),
-            'status' => '1',
+            'status' => Statuses::TODO,
             'type' => '1',
             'data' => '{}',
         ];

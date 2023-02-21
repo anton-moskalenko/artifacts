@@ -8,8 +8,10 @@ class Statuses
     public const SUCCESS = 2;
     public const FAILURE = 3;
     public const REMOVED = 4;
+    public const TODO = 5;
 
     public static $list = [
+        self::TODO => 'To Do',
         self::IN_HAND => 'In hand',
         self::SUCCESS => 'Success',
         self::FAILURE => 'Failure',
@@ -18,6 +20,6 @@ class Statuses
 
     public static function getActive(): array
     {
-        return [self::IN_HAND, self::SUCCESS, self::FAILURE];
+        return [self::TODO, self::IN_HAND, self::SUCCESS, self::FAILURE];
     }
 }
