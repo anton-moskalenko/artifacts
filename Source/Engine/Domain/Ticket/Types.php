@@ -9,7 +9,7 @@ class Types
     public const FAMILY = 3;
     public const PROJECTS = 4;
     public const EXAMS = 5;
-    public const ARTIFACTS = 6;
+    public const MYTHS = 6;
     public const PROTOCOLS = 7;
 
     public static $list = [
@@ -19,6 +19,6 @@ class Types
         self::PROJECTS => 'Projects',
         self::PROTOCOLS => 'Protocols',
         self::EXAMS => 'Exams',
-        self::ARTIFACTS => 'Artifacts'
+        self::MYTHS => 'Myths'
     ];
 }
