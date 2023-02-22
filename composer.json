@@ -9,6 +9,7 @@
         "anton-moskalenko/rune-api": "dev-main",
         "anton-moskalenko/rune-tools": "dev-main",
         "anton-moskalenko/judex": "dev-master",
+        "anton-moskalenko/interstate": "dev-main",
         "anton-moskalenko/stylo": "dev-main"
     },
     "autoload": {
