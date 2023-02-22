@@ -4,6 +4,7 @@ namespace Liloi\Rune\API;
 
 use Liloi\API\Manager;
 use Liloi\API\Method;
+use Liloi\Interstate\API\Tree as InterstateTree;
 
 /**
  * @inheritDoc
@@ -26,6 +27,8 @@ class Tree
         $manager->add(new Method('Artifact.Map.Get', '\Liloi\Rune\API\Map\Get\Method::execute'));
         $manager->add(new Method('Artifact.Map.Edit', '\Liloi\Rune\API\Map\Edit\Method::execute'));
         $manager->add(new Method('Artifact.Map.Save', '\Liloi\Rune\API\Map\Save\Method::execute'));
+
+        InterstateTree::collect($manager);
 
         self::$manager = $manager;
     }
