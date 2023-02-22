@@ -10,15 +10,15 @@ class Types
     public const PROJECTS = 4;
     public const EXAMS = 5;
     public const ARTIFACTS = 6;
-    public const HORCRUXES = 7;
+    public const PROTOCOLS = 7;
 
     public static $list = [
         self::HOBBIES => 'Hobbies',
         self::TRAINING => 'Training',
         self::FAMILY => 'Family',
         self::PROJECTS => 'Projects',
+        self::PROTOCOLS => 'Protocols',
         self::EXAMS => 'Exams',
-        self::ARTIFACTS => 'Artifacts',
-        self::HORCRUXES => 'Horcruxes',
+        self::ARTIFACTS => 'Artifacts'
     ];
 }
