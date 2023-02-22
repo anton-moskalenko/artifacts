@@ -8,6 +8,8 @@
         <script><?php echo file_get_contents(ROOT_DIR . '/vendor/anton-moskalenko/rune-api/Client/API.js'); ?></script>
         <script><?php echo file_get_contents(ROOT_DIR . '/vendor/anton-moskalenko/nexus/Source/API/Ticket/Requests.js'); ?></script>
         <script><?php echo file_get_contents(ROOT_DIR . '/vendor/anton-moskalenko/nexus/Source/API/Map/Requests.js'); ?></script>
+        <script><?php echo file_get_contents(ROOT_DIR . '/vendor/anton-moskalenko/interstate/Source/API/Points/Requests.js'); ?></script>
+
         <style><?php echo file_get_contents(ROOT_DIR . '/vendor/anton-moskalenko/nexus/Source/Engine/Manager.css'); ?></style>
         <title>Nexus - <?php echo gmdate('Y-m-d H:i:s'); ?></title>
     </head>
@@ -15,7 +17,8 @@
         <div id="menu">
             <div id="major">
                 <a href="javascript:void(0)" onclick="Interstate.Ticket.create();">Create new ticket</a> &diams;
-                <a href="javascript:void(0)" onclick="Artifact.Map.Edit();">Edit plan point</a>
+                <a href="javascript:void(0)" onclick="Artifact.Map.Edit();">Edit plan point</a> &diams;
+                <a href="javascript:void(0)" onclick="Interstate.Points.Collection();">Log</a>
             </div>
             <div id="minor">
                 <input type="date" id="current-date" value="<?php echo gmdate("Y-m-d"); ?>">
