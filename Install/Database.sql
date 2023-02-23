@@ -19,3 +19,12 @@ create table rune_map
     constraint rune_map_pk
         primary key (key_url)
 );
+
+alter table interstate_tickets
+    add key_url varchar(250) default '/map' not null;
+
+alter table interstate_tickets
+    add constraint interstate_tickets_rune_map_key_url_fk
+        foreign key (key_url) references rune_map (key_url)
+            on update cascade on delete cascade;
+

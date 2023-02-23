@@ -65,6 +65,7 @@ Interstate.Ticket.save = function (key)
     API.request('Interstate.Ticket.Save', {
         'key': key,
         'title': jq_block.find('[name="title"]').val(),
+        'url': jq_block.find('[name="url"]').val(),
         'start': jq_block.find('[name="start"]').val(),
         'finish': jq_block.find('[name="finish"]').val(),
         'status': jq_block.find('[name="status"]').val(),
