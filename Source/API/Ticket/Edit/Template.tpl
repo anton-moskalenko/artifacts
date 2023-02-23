@@ -7,6 +7,7 @@
             <th>Value</th>
         </tr>
         <tr><td>Title</td><td><input type="text" name="title" value="<?php echo $entity->getTitle(); ?>"/></td></tr>
+        <tr><td>URL</td><td><input type="text" name="url" value="<?php echo $entity->getURL(); ?>"/></td></tr>
         <tr><td>Start</td><td>
             <input type="text" name="start" value="<?php echo $entity->getStart(); ?>"/>
             <a href="javascript:void(0)" onclick="$('[name=start]').val('<?php echo gmdate('Y-m-d H:i:s'); ?>');">Now</a>

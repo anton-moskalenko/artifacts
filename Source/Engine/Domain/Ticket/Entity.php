@@ -25,6 +25,17 @@ class Entity extends AbstractEntity
         $this->data['title'] = $value;
     }
 
+    public function getURL(): string
+    {
+        return $this->getField('key_url');
+    }
+
+    public function setURL(string $value): void
+    {
+        // @todo Extract param names to const.
+        $this->data['key_url'] = $value;
+    }
+
     public function getDate(): string
     {
         return date('Y-m-d', strtotime($this->getStart()));

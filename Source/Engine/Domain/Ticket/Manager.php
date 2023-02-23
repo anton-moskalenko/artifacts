@@ -75,6 +75,7 @@ class Manager extends DomainManager
             'status' => Statuses::TODO,
             'type' => '1',
             'data' => '{}',
+            'key_url' => $_SERVER['REQUEST_URI']
         ];
 
         $name = self::getTableName();
