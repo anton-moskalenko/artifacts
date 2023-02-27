@@ -14,7 +14,7 @@
         <title>Nexus - <?php echo gmdate('Y-m-d H:i:s'); ?></title>
     </head>
     <body>
-        <div id="menu">
+        <div id="header">
             <div id="major">
                 <a href="javascript:void(0)" onclick="Interstate.Ticket.create();">Create new ticket</a> &diams;
                 <a href="javascript:void(0)" onclick="Artifact.Map.Edit();">Edit plan point</a> &diams;
@@ -26,14 +26,15 @@
             </div>
         </div>
 
-        <table style="width: 100%;">
+        <table style="width: 100%;height: 96%;">
             <tr>
+                <td id="menu"></td>
                 <td style="width: 50%;"><div id="page"></div></td>
                 <td><div id="map"></div></td>
             </tr>
         </table>
 
-        <div id="bar">
+        <div id="footer">
 
         </div>
         <script>
