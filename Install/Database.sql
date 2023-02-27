@@ -28,3 +28,11 @@ alter table interstate_tickets
         foreign key (key_url) references rune_map (key_url)
             on update cascade on delete cascade;
 
+alter table interstate_tickets
+    add majoro tinyint unsigned default 0 not null;
+
+alter table interstate_tickets
+    add minoro tinyint unsigned default 0 not null;
+
+alter table interstate_tickets
+    add atomico tinyint unsigned default 0 not null;

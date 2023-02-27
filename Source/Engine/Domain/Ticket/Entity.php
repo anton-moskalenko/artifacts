@@ -6,6 +6,14 @@ use Liloi\Tools\Entity as AbstractEntity;
 
 /**
  * @todo: add tests
+ *
+ * @method string getMajoro()
+ * @method string getMinoro()
+ * @method string getAtomico()
+ * @method void setMajoro(string $value)
+ * @method void setMinoro(string $value)
+ * @method void setAtomico(string $value)
+ *
  */
 class Entity extends AbstractEntity
 {
@@ -49,33 +57,6 @@ class Entity extends AbstractEntity
     public function getFinishTime(): string
     {
         return date('H:i:s', strtotime($this->getFinish()));
-    }
-
-    public function getStart(): string
-    {
-        return $this->getField('start');
-    }
-
-    public function setStart(string $value): void
-    {
-        // @todo Extract param names to const.
-        $this->data['start'] = $value;
-    }
-
-    public function getFinish(): string
-    {
-        return $this->getField('finish');
-    }
-
-    public function setFinish(string $value): void
-    {
-        // @todo Extract param names to const.
-        $this->data['finish'] = $value;
-    }
-
-    public function getStatus(): string
-    {
-        return $this->getField('status');
     }
 
     public function getStatusString(): string
