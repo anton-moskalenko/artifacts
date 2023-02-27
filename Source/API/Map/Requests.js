@@ -6,7 +6,7 @@ Artifact.Map = {
         API.request('Artifact.Map.Get', {
 
         }, function (data) {
-            $('#map').html(data.render);
+            $('#page').html(data.render);
         }, function () {
 
         });
@@ -17,7 +17,7 @@ Artifact.Map = {
         API.request('Artifact.Map.Edit', {
 
         }, function (data) {
-            $('#map').html(data.render);
+            $('#page').html(data.render);
         }, function () {
 
         });
@@ -31,8 +31,8 @@ Artifact.Map = {
         }
 
         API.request('Artifact.Map.Save', {
-            title: $('#map [name="title"]').val(),
-            program: $('#map [name="program"]').val()
+            title: $('#page [name="title"]').val(),
+            program: $('#page [name="program"]').val()
         }, function (data) {
             Artifact.Map.Get();
         }, function () {
