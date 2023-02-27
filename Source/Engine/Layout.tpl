@@ -14,31 +14,43 @@
         <title>Nexus - <?php echo gmdate('Y-m-d H:i:s'); ?></title>
     </head>
     <body>
-        <div id="menu">
+
+        <script>
+            let Tickets = function ()
+            {
+
+            };
+        </script>
+
+        <div id="header">
             <div id="major">
                 <a href="javascript:void(0)" onclick="Interstate.Ticket.create();">Create new ticket</a> &diams;
                 <a href="javascript:void(0)" onclick="Artifact.Map.Edit();">Edit plan point</a> &diams;
                 <a href="javascript:void(0)" onclick="Interstate.Points.Collection();">Log</a>
-            </div>
-            <div id="minor">
+
                 <input type="date" id="current-date" value="<?php echo gmdate("Y-m-d"); ?>">
                 <a href="javascript:void(0)" onclick="Interstate.Ticket.Collection($('#current-date').val());">Check</a>
             </div>
         </div>
 
-        <table style="width: 100%;">
+        <table style="width: 100%;height: 96%;">
             <tr>
-                <td style="width: 50%;"><div id="page"></div></td>
-                <td><div id="map"></div></td>
+                <td id="menu">
+                    <a href="javascript::void(0)" onclick="Interstate.Ticket.Collection('<?php echo gmdate("Y-m-d"); ?>');">Tickets</a>
+                    <a href="javascript::void(0)" onclick="Artifact.Map.Get();">Drive</a>
+                </td>
+                <td id="page">
+
+                </td>
             </tr>
         </table>
 
-        <div id="bar">
+        <div id="footer">
 
         </div>
         <script>
-            Interstate.Ticket.Collection('<?php echo gmdate("Y-m-d"); ?>');
-            Artifact.Map.Get();
+
+
         </script>
     </body>
 </html>

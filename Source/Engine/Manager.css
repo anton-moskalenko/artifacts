@@ -29,22 +29,31 @@ a
 
 #menu
 {
-    height: 100px;
-    width: 100%;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(190,190,190,1) 100%);
-    text-align: center;
-    font-size: xx-large;
+    background-color: #ececec;
+    width: 100px;
 }
 
-#bar
+#header
+{
+    /*height: 100px;*/
+    height: 20px;
+    width: 100%;
+    /*background: rgb(255,255,255);*/
+    /*background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(190,190,190,1) 100%);*/
+    background-color: #ececec;
+    text-align: center;
+    /*font-size: xx-large;*/
+}
+
+#footer
 {
     height: 20px;
     width: 100%;
     position:fixed;
     bottom:0;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(190,190,190,1) 0%, rgba(255,255,255,1) 100%);
+    /*background: rgb(255,255,255);*/
+    /*background: linear-gradient(0deg, rgba(190,190,190,1) 0%, rgba(255,255,255,1) 100%);*/
+    background-color: #ececec;
     text-align: center;
     font-size: large;
 }
