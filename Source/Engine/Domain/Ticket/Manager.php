@@ -1,8 +1,8 @@
 <?php
 
-namespace Liloi\Rune\Engine\Domain\Ticket;
+namespace Liloi\Nexus\Engine\Domain\Ticket;
 
-use Liloi\Rune\Engine\Domain\Manager as DomainManager;
+use Liloi\Nexus\Engine\Domain\Manager as DomainManager;
 
 class Manager extends DomainManager
 {
@@ -25,6 +25,26 @@ class Manager extends DomainManager
             $name,
             date('Y-m-d 00:00:00', strtotime($dt)),
             date('Y-m-d 23:59:59', strtotime($dt)),
+        ));
+
+        $collection = new Collection();
+
+        foreach($rows as $row)
+        {
+            $collection[] = Entity::create($row);
+        }
+
+        return $collection;
+    }
+
+    public static function loadByRID(string $uid): Collection
+    {
+        $name = self::getTableName();
+
+        $rows = self::getAdapter()->getArray(sprintf(
+            'select * from %s where uid="%s" order by key_ticket desc limit 100;',
+            $name,
+            $uid
         ));
 
         $collection = new Collection();
@@ -75,7 +95,7 @@ class Manager extends DomainManager
             'status' => Statuses::TODO,
             'type' => '1',
             'data' => '{}',
-            'key_url' => '/map'
+            'key_url' => $_SERVER['REQUEST_URI'] !== '/' ? $_SERVER['REQUEST_URI'] : '/map'
         ];
 
         $name = self::getTableName();

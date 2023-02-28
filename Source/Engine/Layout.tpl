@@ -36,8 +36,8 @@
         <table style="width: 100%;height: 96%;">
             <tr>
                 <td id="menu">
+                    <a href="javascript::void(0)" onclick="Artifact.Map.Get();">Plan</a><br/>
                     <a href="javascript::void(0)" onclick="Interstate.Ticket.Collection('<?php echo gmdate("Y-m-d"); ?>');">Tickets</a>
-                    <a href="javascript::void(0)" onclick="Artifact.Map.Get();">Drive</a>
                 </td>
                 <td id="page">
 
@@ -49,8 +49,7 @@
 
         </div>
         <script>
-
-
+            Artifact.Map.Get();
         </script>
     </body>
 </html>

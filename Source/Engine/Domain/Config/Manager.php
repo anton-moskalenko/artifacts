@@ -1,8 +1,8 @@
 <?php
 
-namespace Liloi\Rune\Engine\Domain\Config;
+namespace Liloi\Nexus\Engine\Domain\Config;
 
-use Liloi\Rune\Engine\Domain\Manager as DomainManager;
+use Liloi\Nexus\Engine\Domain\Manager as DomainManager;
 
 class Manager extends DomainManager
 {

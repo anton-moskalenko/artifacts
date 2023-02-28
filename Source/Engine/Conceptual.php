@@ -1,9 +1,9 @@
 <?php
 
-namespace Liloi\Rune\Engine;
+namespace Liloi\Nexus\Engine;
 
-use Liloi\Rune\API\Tree;
-use Liloi\Rune\Engine\Domain\Manager;
+use Liloi\Nexus\API\Tree;
+use Liloi\Nexus\Engine\Domain\Manager;
 use Liloi\Config\Pool;
 use Rune\Application\Conceptual as ConceptualApplication;
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace Liloi\Rune\API\Map\Get;
+namespace Liloi\Nexus\API\Map\Get;
 
 use Liloi\API\Response;
-use Liloi\Rune\API\Method as SuperMethod;
-use Liloi\Rune\Engine\Domain\Map\Manager;
-use Liloi\Rune\Engine\Domain\Map\Entity;
+use Liloi\Nexus\API\Method as SuperMethod;
+use Liloi\Nexus\Engine\Domain\Map\Entity;
+use Liloi\Nexus\Engine\Domain\Ticket\Manager as TicketManager;
 
 class Method extends SuperMethod
 {
@@ -13,10 +13,13 @@ class Method extends SuperMethod
     {
         $map = Entity::getCurrent();
 
+        $collection = TicketManager::loadByRID($map->getRID());
+
         $response = new Response();
 
         $response->set('render', static::render(__DIR__ . '/Template.tpl', [
-            'map' => $map
+            'map' => $map,
+            'tickets' => $collection
         ]));
 
         return $response;
