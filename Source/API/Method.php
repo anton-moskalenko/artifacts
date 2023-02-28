@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\Rune\API;
+namespace Liloi\Nexus\API;
 
 use Judex\Assert;
 use Liloi\API\Response;

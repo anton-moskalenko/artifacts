@@ -1,8 +1,8 @@
 <?php
 
-namespace Liloi\Rune\Engine\Domain\Ticket;
+namespace Liloi\Nexus\Engine\Domain\Ticket;
 
-use Liloi\Rune\Engine\Domain\Manager as DomainManager;
+use Liloi\Nexus\Engine\Domain\Manager as DomainManager;
 
 class Manager extends DomainManager
 {

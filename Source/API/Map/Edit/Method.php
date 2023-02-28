@@ -1,11 +1,11 @@
 <?php
 
-namespace Liloi\Rune\API\Map\Edit;
+namespace Liloi\Nexus\API\Map\Edit;
 
 use Liloi\API\Response;
-use Liloi\Rune\API\Method as SuperMethod;
-use Liloi\Rune\Engine\Domain\Map\Manager;
-use Liloi\Rune\Engine\Domain\Map\Entity;
+use Liloi\Nexus\API\Method as SuperMethod;
+use Liloi\Nexus\Engine\Domain\Map\Manager;
+use Liloi\Nexus\Engine\Domain\Map\Entity;
 
 class Method extends SuperMethod
 {

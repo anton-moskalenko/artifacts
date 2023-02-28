@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\Rune\Engine\Domain;
+namespace Liloi\Nexus\Engine\Domain;
 
 use Liloi\Tools\Manager as AbstractManager;
 use Liloi\Config\Pool;

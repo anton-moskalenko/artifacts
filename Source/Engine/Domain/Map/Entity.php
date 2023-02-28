@@ -1,11 +1,11 @@
 <?php
 
-namespace Liloi\Rune\Engine\Domain\Map;
+namespace Liloi\Nexus\Engine\Domain\Map;
 
 use Liloi\Tools\Entity as AbstractEntity;
 use Liloi\Stylo\Parser;
-use Liloi\Rune\Engine\Domain\Map\Manager as MapManager;
-use Liloi\Rune\Engine\Domain\Config\Manager as ConfigManager;
+use Liloi\Nexus\Engine\Domain\Map\Manager as MapManager;
+use Liloi\Nexus\Engine\Domain\Config\Manager as ConfigManager;
 
 /**
  * @todo: add tests

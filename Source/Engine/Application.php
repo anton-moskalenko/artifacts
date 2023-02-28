@@ -1,8 +1,8 @@
 <?php
 
-namespace Liloi\Rune\Engine;
+namespace Liloi\Nexus\Engine;
 
-use Liloi\Rune\API\Tree;
+use Liloi\Nexus\API\Tree;
 
 /**
  * @inheritDoc

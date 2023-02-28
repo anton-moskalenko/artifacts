@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Liloi\\Rune\\": "Source"
+            "Liloi\\Nexus\\": "Source"
         }
     }
 }
