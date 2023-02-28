@@ -37,6 +37,11 @@ class Entity extends AbstractEntity
         return $this->getField('key_url');
     }
 
+    public function getRID(): string
+    {
+        return str_replace('/', ':', ltrim($this->getKey(), '/'));
+    }
+
     public function getURL(): string
     {
         return $this->getField('url');

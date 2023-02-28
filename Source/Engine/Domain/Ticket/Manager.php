@@ -37,6 +37,26 @@ class Manager extends DomainManager
         return $collection;
     }
 
+    public static function loadByRID(string $uid): Collection
+    {
+        $name = self::getTableName();
+
+        $rows = self::getAdapter()->getArray(sprintf(
+            'select * from %s where uid="%s" order by key_ticket desc limit 100;',
+            $name,
+            $uid
+        ));
+
+        $collection = new Collection();
+
+        foreach($rows as $row)
+        {
+            $collection[] = Entity::create($row);
+        }
+
+        return $collection;
+    }
+
     public static function load(string $key): Entity
     {
         $name = self::getTableName();
@@ -75,7 +95,7 @@ class Manager extends DomainManager
             'status' => Statuses::TODO,
             'type' => '1',
             'data' => '{}',
-            'key_url' => '/map'
+            'key_url' => $_SERVER['REQUEST_URI'] !== '/' ? $_SERVER['REQUEST_URI'] : '/map'
         ];
 
         $name = self::getTableName();
