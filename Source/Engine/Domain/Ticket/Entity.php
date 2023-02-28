@@ -120,6 +120,11 @@ class Entity extends AbstractEntity
         return strtotime($this->getFinish()) - strtotime($this->getStart());
     }
 
+    public function getVersion(): string
+    {
+        return sprintf('%s.%s.%s', $this->getMajoro(), $this->getMinoro(), $this->getAtomico());
+    }
+
     public function save(): void
     {
         Manager::save($this);
