@@ -24,7 +24,7 @@
             <?php if(!empty($lesson)): ?>
                 <table style="width: 100%;" class="table-tickets">
                     <tr>
-                        <th>Version</th>
+                        <th>Project (Version)</th>
                         <th>Title</th>
                         <th>Date</th>
                         <th>URL</th>
