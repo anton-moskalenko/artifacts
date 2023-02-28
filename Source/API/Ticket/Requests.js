@@ -64,6 +64,9 @@ Interstate.Ticket.save = function (key)
     const jq_block = $('#ticket-edit');
     API.request('Interstate.Ticket.Save', {
         'key': key,
+        'majoro': jq_block.find('[name="majoro"]').val(),
+        'minoro': jq_block.find('[name="minoro"]').val(),
+        'atomico': jq_block.find('[name="atomico"]').val(),
         'title': jq_block.find('[name="title"]').val(),
         'url': jq_block.find('[name="url"]').val(),
         'start': jq_block.find('[name="start"]').val(),
