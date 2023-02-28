@@ -13,6 +13,7 @@ class Method extends SuperMethod
     {
         $entity = Manager::load(self::getParameter('key'));
 
+        $entity->setUid(self::getParameter('uid'));
         $entity->setMajoro(self::getParameter('majoro'));
         $entity->setMinoro(self::getParameter('minoro'));
         $entity->setAtomico(self::getParameter('atomico'));

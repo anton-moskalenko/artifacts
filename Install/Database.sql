@@ -36,3 +36,6 @@ alter table interstate_tickets
 
 alter table interstate_tickets
     add atomico tinyint unsigned default 0 not null;
+
+alter table interstate_tickets
+    add uid varchar(1000) default 'root' not null;

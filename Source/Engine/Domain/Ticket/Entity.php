@@ -122,7 +122,7 @@ class Entity extends AbstractEntity
 
     public function getVersion(): string
     {
-        return sprintf('%s.%s.%s', $this->getMajoro(), $this->getMinoro(), $this->getAtomico());
+        return sprintf('%s (%s.%s.%s)', $this->getUid(), $this->getMajoro(), $this->getMinoro(), $this->getAtomico());
     }
 
     public function save(): void
