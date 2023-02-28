@@ -6,6 +6,10 @@
             <th>Name</th>
             <th>Value</th>
         </tr>
+        <tr><td>UID</td><td><input type="text" name="uid" value="<?php echo $entity->getUid(); ?>"/></td></tr>
+        <tr><td>Majoro</td><td><input type="text" name="majoro" value="<?php echo $entity->getMajoro(); ?>"/></td></tr>
+        <tr><td>Minoro</td><td><input type="text" name="minoro" value="<?php echo $entity->getMinoro(); ?>"/></td></tr>
+        <tr><td>Atomico</td><td><input type="text" name="atomico" value="<?php echo $entity->getAtomico(); ?>"/></td></tr>
         <tr><td>Title</td><td><input type="text" name="title" value="<?php echo $entity->getTitle(); ?>"/></td></tr>
         <tr><td>URL</td><td><input type="text" name="url" value="<?php echo $entity->getURL(); ?>"/></td></tr>
         <tr><td>Start</td><td>
