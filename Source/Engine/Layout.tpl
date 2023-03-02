@@ -22,21 +22,13 @@
         </script>
 
         <div id="header">
-            <div id="major">
-                <a href="javascript:void(0)" onclick="Interstate.Ticket.create();">Create new ticket</a> &diams;
-                <a href="javascript:void(0)" onclick="Artifact.Map.Edit();">Edit plan point</a> &diams;
-                <a href="javascript:void(0)" onclick="Interstate.Points.Collection();">Log</a>
-
-                <input type="date" id="current-date" value="<?php echo gmdate("Y-m-d"); ?>">
-                <a href="javascript:void(0)" onclick="Interstate.Ticket.Collection($('#current-date').val());">Check</a>
-            </div>
+            <input type="date" id="current-date" value="<?php echo gmdate("Y-m-d"); ?>">
         </div>
 
         <table style="width: 100%;height: 96%;">
             <tr>
                 <td id="menu">
-                    <a href="javascript::void(0)" onclick="Artifact.Map.Get();">Plan</a><br/>
-                    <a href="javascript::void(0)" onclick="Interstate.Ticket.Collection('<?php echo gmdate("Y-m-d"); ?>');">Tickets</a>
+
                 </td>
                 <td id="map">
 
