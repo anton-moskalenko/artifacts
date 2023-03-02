@@ -68,17 +68,39 @@ class Manager extends DomainManager
     // @todo: rise this method to more abstract level.
     public static function create(): void
     {
-        $row = [
-            'title' => 'Enter the title',
-            'start' => gmdate('Y-m-d H:-i:s'),
-            'finish' => gmdate('Y-m-d H:-i:s'),
-            'status' => Statuses::TODO,
-            'type' => '1',
-            'data' => '{}',
-            'key_url' => $_SERVER['REQUEST_URI'] !== '/' ? $_SERVER['REQUEST_URI'] : '/map'
-        ];
+        $name = self::getTableName();
+        $key_quest_previous = self::getAdapter()->getSingle(sprintf(
+            'select key_quest from %s order by start desc limit 1',
+            $name
+        ));
+
+        $key_quest = date('Y:W:N:0');
+
+        if($key_quest_previous)
+        {
+            list($old_year, $old_week, $old_day, $old_ticket) = explode(':', $key_quest_previous);
+            list($new_year, $new_week, $new_day, $new_ticket) = explode(':', $key_quest);
+
+            if($old_year == $new_year && $old_week == $new_week && $old_day == $new_day)
+            {
+                $new_ticket = $old_ticket + 1;
+            }
+
+            $key_quest = implode(':', [$new_year, $new_week, $new_day, $new_ticket]);
+        }
 
         $name = self::getTableName();
-        self::getAdapter()->insert($name, $row);
+        self::getAdapter()->insert($name, [
+            'key_quest' => $key_quest,
+            'title' => 'Enter the title',
+            'program' => '// comment',
+            'goal' => 'Enter the goal',
+            'start' => gmdate('Y-m-d H:i:s'),
+            'finish' => gmdate('Y-m-d H:i:s'),
+            'status' => Statuses::TODO,
+            'type' => Types::MILESTONE,
+            'tags' => 'Enter the tags',
+            'data' => '{}'
+        ]);
     }
 }
