@@ -15,6 +15,7 @@ class Collection extends AbstractCollection
     {
         $total = 0;
 
+        /** @var Entity $entity */
         foreach($this as $entity)
         {
             $total += $entity->getPeriodUnix();

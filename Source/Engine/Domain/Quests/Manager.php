@@ -21,30 +21,9 @@ class Manager extends DomainManager
         $name = self::getTableName();
 
         $rows = self::getAdapter()->getArray(sprintf(
-            'select * from %s where status in (1,2,3,5) and start between "%s" and "%s" order by key_ticket desc limit 100;',
+            'select * from %s where start <= "%s" order by dt desc limit 100;',
             $name,
-            date('Y-m-d 00:00:00', strtotime($dt)),
-            date('Y-m-d 23:59:59', strtotime($dt)),
-        ));
-
-        $collection = new Collection();
-
-        foreach($rows as $row)
-        {
-            $collection[] = Entity::create($row);
-        }
-
-        return $collection;
-    }
-
-    public static function loadByRID(string $uid): Collection
-    {
-        $name = self::getTableName();
-
-        $rows = self::getAdapter()->getArray(sprintf(
-            'select * from %s where uid="%s" order by key_ticket desc limit 100;',
-            $name,
-            $uid
+            date('Y-m-d 23:59:59', strtotime($dt))
         ));
 
         $collection = new Collection();
@@ -62,8 +41,9 @@ class Manager extends DomainManager
         $name = self::getTableName();
 
         $row = self::getAdapter()->getRow(sprintf(
-            'select * from %s where key_ticket="%s"',
-            $name, $key
+            'select * from %s where key_quest="%s"',
+            $name,
+            $key
         ));
 
         return Entity::create($row);
@@ -75,13 +55,13 @@ class Manager extends DomainManager
         $data = $entity->get();
 
         // @todo: Get param name from const.
-        $key = $data['key_ticket'];
-        unset($data['key_ticket']);
+        $key = $data['key_quest'];
+        unset($data['key_quest']);
 
         self::getAdapter()->update(
             $name,
             $data,
-            sprintf('key_ticket = "%s"', $key)
+            sprintf('key_quest = "%s"', $key)
         );
     }
 
