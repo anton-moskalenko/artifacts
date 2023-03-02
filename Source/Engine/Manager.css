@@ -64,12 +64,14 @@ a
 {
     height: 80%;
     overflow-y: scroll;
+    width: 70%;
+    display: none;
+    background-color: #ececec;
 }
 
 #map
 {
     height: 80%;
-    width: 30%;
     background-color: #eeffef;
 }
 

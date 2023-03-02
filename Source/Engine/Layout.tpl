@@ -28,7 +28,7 @@
         <table style="width: 100%;height: 96%;">
             <tr>
                 <td id="menu">
-
+                    <a href="javascript::void(0)" onclick="$('#page').toggle();">Info</a><br/>
                 </td>
                 <td id="map">
 
