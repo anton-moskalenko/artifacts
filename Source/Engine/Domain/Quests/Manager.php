@@ -21,7 +21,7 @@ class Manager extends DomainManager
         $name = self::getTableName();
 
         $rows = self::getAdapter()->getArray(sprintf(
-            'select * from %s where start <= "%s" order by dt desc limit 100;',
+            'select * from %s where start <= "%s" order by start desc limit 100;',
             $name,
             date('Y-m-d 23:59:59', strtotime($dt))
         ));

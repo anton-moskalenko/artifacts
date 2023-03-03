@@ -8,6 +8,7 @@
         <script><?php echo file_get_contents(ROOT_DIR . '/vendor/anton-moskalenko/rune-api/Client/API.js'); ?></script>
         <script><?php echo file_get_contents(ROOT_DIR . '/vendor/anton-moskalenko/nexus/Source/API/Ticket/Requests.js'); ?></script>
         <script><?php echo file_get_contents(ROOT_DIR . '/vendor/anton-moskalenko/nexus/Source/API/Map/Requests.js'); ?></script>
+        <script><?php echo file_get_contents(ROOT_DIR . '/vendor/anton-moskalenko/nexus/Source/API/Quests/Requests.js'); ?></script>
 
         <style><?php echo file_get_contents(ROOT_DIR . '/vendor/anton-moskalenko/nexus/Source/Engine/Manager.css'); ?></style>
         <title>Nexus - <?php echo gmdate('Y-m-d H:i:s'); ?></title>
@@ -43,7 +44,7 @@
 
         </div>
         <script>
-            Artifact.Map.Get();
+            API.Quests.show();
         </script>
     </body>
 </html>
