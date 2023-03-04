@@ -37,13 +37,14 @@ a
 #header
 {
     /*height: 100px;*/
-    height: 20px;
+    height: 30px;
     width: 100%;
     /*background: rgb(255,255,255);*/
     /*background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(190,190,190,1) 100%);*/
     background-color: #ececec;
     text-align: center;
     /*font-size: xx-large;*/
+    padding-top: 5px;
 }
 
 #footer
@@ -63,6 +64,15 @@ a
 {
     height: 80%;
     overflow-y: scroll;
+    width: 70%;
+    display: none;
+    background-color: #ececec;
+}
+
+#map
+{
+    height: 80%;
+    background-color: #eeffef;
 }
 
 #minor
