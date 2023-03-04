@@ -24,5 +24,21 @@ API.Quests = {
         }, function () {
 
         });
+    },
+
+    remove: function (key)
+    {
+        if(!confirm('Are you sure?'))
+        {
+            return;
+        }
+
+        API.request('Nexus.Quests.Remove', {
+            'key': key
+        }, function (data) {
+            API.Quests.show();
+        }, function () {
+
+        });
     }
 }
