@@ -20,15 +20,23 @@
 
             <?php if($entity->isVirtual()): ?>
                 <tr>
-                    <td><?php echo $entity->getVirtual('time'); ?></td>
+                    <td></td>
+                    <td style="text-align: right;">
+                        <?php if($entity->getVirtual('time') % 3 == 0): ?>
+                            <img src="/vendor/anton-moskalenko/nexus/Pool/Images/Milestone.png" alt="<?php echo $key_dt; ?>" width="30" />
+                        <?php endif; ?>
+                    </td>
                     <td class="road"></td>
+                    <td></td>
                     <td style="text-align: right;">
                     </td>
                 </tr>
             <?php else: ?>
                 <tr>
-                    <td><?php echo $entity->getTitle(); ?></td>
+                    <td></td>
+                    <td></td>
                     <td class="road"></td>
+                    <td><?php echo $entity->getTitle(); ?></td>
                     <td style="text-align: right;">
                         <a href="javascript:void(0)" onclick="API.Quests.edit(<?php echo $entity->getKey(); ?>);">Edit</a> &diams;
                         <a href="javascript:void(0)" onclick="API.Quests.remove(<?php echo $entity->getKey(); ?>);">Remove</a>

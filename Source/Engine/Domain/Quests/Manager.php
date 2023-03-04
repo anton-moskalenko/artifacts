@@ -116,7 +116,7 @@ class Manager extends DomainManager
             $group[$key_dt] = [];
             $group[$key_dt][] = Entity::create([
                 'virtual' => [
-                    'time' => date('H', strtotime("-$delta hour"))
+                    'time' => date('G', strtotime("-$delta hour"))
                 ]
             ]);
         }
