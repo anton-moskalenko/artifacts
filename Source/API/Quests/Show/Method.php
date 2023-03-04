@@ -14,7 +14,7 @@ class Method extends SuperMethod
         $response = new Response();
 
         $response->set('render', static::render(__DIR__ . '/Template.tpl', [
-            'collection' => QuestsManager::loadCollection()
+            'group' => QuestsManager::group()
         ]));
 
         return $response;

@@ -31,6 +31,16 @@ class Entity extends AbstractEntity
         return strtotime($this->getFinish()) - strtotime($this->getStart());
     }
 
+    public function isVirtual(): bool
+    {
+        return isset($this->data['virtual']);
+    }
+
+    public function getVirtual(string $key)
+    {
+        return $this->data['virtual'][$key];
+    }
+
     public function save(): void
     {
         Manager::save($this);

@@ -103,4 +103,37 @@ class Manager extends DomainManager
             'data' => '{}'
         ]);
     }
+
+    public static function group(): array
+    {
+        $name = self::getTableName();
+
+        $group = [];
+
+        for($delta=-1;$delta<=72;$delta++)
+        {
+            $key_dt = date('y-m-d-H', strtotime("-$delta hour"));
+            $group[$key_dt] = [];
+            $group[$key_dt][] = Entity::create([
+                'virtual' => [
+                    'time' => date('H', strtotime("-$delta hour"))
+                ]
+            ]);
+        }
+
+        $rows = self::getAdapter()->getArray(sprintf(
+            'select * from %s where start between "%s" and "%s" order by start desc limit 100;',
+            $name,
+            date('Y-m-d H:i:s', strtotime('-72 hour')),
+            date('Y-m-d H:i:s', strtotime('1 hour')),
+        ));
+
+        foreach ($rows as $row)
+        {
+            $key_dt = date('y-m-d-H', strtotime($row['start']));
+            $group[$key_dt][] = Entity::create($row);
+        }
+
+        return $group;
+    }
 }
