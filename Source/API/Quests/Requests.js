@@ -40,5 +40,16 @@ API.Quests = {
         }, function () {
 
         });
+    },
+
+    edit: function (key)
+    {
+        API.request('Nexus.Quests.Edit', {
+            'key': key
+        }, function (data) {
+            $('#map').html(data.render);
+        }, function () {
+
+        });
     }
 }

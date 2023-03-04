@@ -8,7 +8,6 @@ create table rune_quests
 	finish timestamp not null,
 	status tinyint unsigned not null,
 	type smallint unsigned not null,
-	tags varchar(100) not null,
 	data json not null,
 	constraint rune_quests_pk
 		primary key (key_quest)

@@ -99,7 +99,6 @@ class Manager extends DomainManager
             'finish' => date('Y-m-d H:i:s'),
             'status' => Statuses::TODO,
             'type' => Types::MILESTONE,
-            'tags' => 'Enter the tags',
             'data' => '{}'
         ]);
     }

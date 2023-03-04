@@ -21,6 +21,7 @@ class Tree
         $manager->add(new Method('Nexus.Quests.Show', '\Liloi\Nexus\API\Quests\Show\Method::execute'));
         $manager->add(new Method('Nexus.Quests.Create', '\Liloi\Nexus\API\Quests\Create\Method::execute'));
         $manager->add(new Method('Nexus.Quests.Remove', '\Liloi\Nexus\API\Quests\Remove\Method::execute'));
+        $manager->add(new Method('Nexus.Quests.Edit', '\Liloi\Nexus\API\Quests\Edit\Method::execute'));
 
         self::$manager = $manager;
     }
