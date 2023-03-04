@@ -1,5 +1,5 @@
 <div id="ticket-edit">
-    <a href="javascript:void(0)" onclick="API.Quests.save(<?php echo $entity->getKey(); ?>);">Save</a>
+    <a href="javascript:void(0)" onclick="API.Quests.save('<?php echo $entity->getKey(); ?>');">Save</a>
     <hr/>
     <table style="width: 100%;">
         <tr>
@@ -34,5 +34,5 @@
         <tr><td>Data</td><td><input type="text" name="data" value="<?php echo $entity->getData(); ?>"/></td></tr>
     </table>
     <hr/>
-    <a href="javascript:void(0)" onclick="API.Quests.save(<?php echo $entity->getKey(); ?>);">Save</a>
+    <a href="javascript:void(0)" onclick="API.Quests.save('<?php echo $entity->getKey(); ?>');">Save</a>
 </div>

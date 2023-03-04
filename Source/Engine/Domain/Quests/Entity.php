@@ -11,6 +11,11 @@ use Liloi\Tools\Entity as AbstractEntity;
  * @method void setFinish(string $value)
  * @method string getStatus()
  * @method void setStatus(string $value)
+ * @method void setTitle(string $value)
+ * @method void setProgram(string $value)
+ * @method void setGoal(string $value)
+ * @method void setType(string $value)
+ * @method void setData(string $value)
  *
  */
 class Entity extends AbstractEntity

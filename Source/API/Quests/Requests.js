@@ -51,5 +51,30 @@ API.Quests = {
         }, function () {
 
         });
+    },
+
+    save: function (key)
+    {
+        if(!confirm('Are you sure?'))
+        {
+            return;
+        }
+
+        const jq_block = $('#ticket-edit');
+        API.request('Nexus.Quests.Save', {
+            'key': key,
+            'title': jq_block.find('[name="title"]').val(),
+            'program': jq_block.find('[name="program"]').val(),
+            'goal': jq_block.find('[name="goal"]').val(),
+            'start': jq_block.find('[name="start"]').val(),
+            'finish': jq_block.find('[name="finish"]').val(),
+            'status': jq_block.find('[name="status"]').val(),
+            'type': jq_block.find('[name="type"]').val(),
+            'data': jq_block.find('[name="data"]').val()
+        }, function (data) {
+            API.Quests.show();
+        }, function () {
+
+        });
     }
 }
