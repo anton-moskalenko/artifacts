@@ -95,8 +95,8 @@ class Manager extends DomainManager
             'title' => 'Enter the title',
             'program' => '// comment',
             'goal' => 'Enter the goal',
-            'start' => gmdate('Y-m-d H:i:s'),
-            'finish' => gmdate('Y-m-d H:i:s'),
+            'start' => date('Y-m-d H:i:s'),
+            'finish' => date('Y-m-d H:i:s'),
             'status' => Statuses::TODO,
             'type' => Types::MILESTONE,
             'tags' => 'Enter the tags',
@@ -122,7 +122,7 @@ class Manager extends DomainManager
         }
 
         $rows = self::getAdapter()->getArray(sprintf(
-            'select * from %s where start between "%s" and "%s" order by start desc limit 100;',
+            'select * from %s where start between "%s" and "%s" order by start asc limit 100;',
             $name,
             date('Y-m-d H:i:s', strtotime('-72 hour')),
             date('Y-m-d H:i:s', strtotime('1 hour')),
@@ -131,7 +131,8 @@ class Manager extends DomainManager
         foreach ($rows as $row)
         {
             $key_dt = date('y-m-d-H', strtotime($row['start']));
-            $group[$key_dt][] = Entity::create($row);
+//            $group[$key_dt][] = Entity::create($row);
+            array_unshift($group[$key_dt], Entity::create($row));
         }
 
         return $group;

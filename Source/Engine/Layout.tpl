@@ -30,6 +30,7 @@
             <tr>
                 <td id="menu">
                     <a href="javascript::void(0)" onclick="$('#page').toggle();">Info</a><br/>
+                    <a href="javascript::void(0)" onclick="API.Quests.create();">Create</a><br/>
                 </td>
                 <td id="map">
 

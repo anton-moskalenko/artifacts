@@ -11,6 +11,7 @@
         width: 200px;
         height: 58px;
         background-size: 30%;
+        opacity: 0.5;
     }
 </style>
 <table id="table-road">
@@ -19,7 +20,7 @@
         <?php foreach($collection as $entity): ?>
 
             <?php if($entity->isVirtual()): ?>
-                <tr>
+                <tr data-dt="<?php echo $key_dt; ?>">
                     <td></td>
                     <td style="text-align: right;">
                         <?php if($entity->getVirtual('time') % 3 == 0): ?>
@@ -32,7 +33,7 @@
                     </td>
                 </tr>
             <?php else: ?>
-                <tr>
+                <tr data-dt="<?php echo $key_dt; ?>">
                     <td></td>
                     <td></td>
                     <td class="road"></td>

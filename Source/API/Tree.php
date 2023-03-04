@@ -19,6 +19,7 @@ class Tree
         // @todo: add automatic API method collect.
 
         $manager->add(new Method('Nexus.Quests.Show', '\Liloi\Nexus\API\Quests\Show\Method::execute'));
+        $manager->add(new Method('Nexus.Quests.Create', '\Liloi\Nexus\API\Quests\Create\Method::execute'));
 
         self::$manager = $manager;
     }
