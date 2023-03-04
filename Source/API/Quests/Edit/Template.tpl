@@ -1,3 +1,16 @@
+<style>
+    #ticket-edit input,
+    #ticket-edit select,
+    #ticket-edit textarea
+    {
+        width: 50%;
+    }
+
+    #ticket-edit textarea
+    {
+        height: 300px;
+    }
+</style>
 <div id="ticket-edit">
     <a href="javascript:void(0)" onclick="API.Quests.save('<?php echo $entity->getKey(); ?>');">Save</a>
     <hr/>
@@ -8,7 +21,7 @@
         </tr>
         <tr><td>Title</td><td><input type="text" name="title" value="<?php echo $entity->getTitle(); ?>"/></td></tr>
         <tr><td>Goad</td><td><input type="text" name="goal" value="<?php echo $entity->getGoal(); ?>"/></td></tr>
-        <tr><td>Program</td><td><input type="text" name="program" value="<?php echo $entity->getProgram(); ?>"/></td></tr>
+        <tr><td>Program</td><td><textarea name="program"><?php echo $entity->getProgram(); ?></textarea></td></tr>
         <tr><td>Start</td><td>
             <input type="text" name="start" value="<?php echo $entity->getStart(); ?>"/>
             <a href="javascript:void(0)" onclick="$('[name=start]').val('<?php echo date('Y-m-d H:i:s'); ?>');">Now</a>
@@ -31,7 +44,7 @@
                 <?php endforeach; ?>
             </select>
         </td></tr>
-        <tr><td>Data</td><td><input type="text" name="data" value="<?php echo $entity->getData(); ?>"/></td></tr>
+        <tr><td>Data</td><td><textarea name="data"><?php echo $entity->getData(); ?></textarea></td></tr>
     </table>
     <hr/>
     <a href="javascript:void(0)" onclick="API.Quests.save('<?php echo $entity->getKey(); ?>');">Save</a>
