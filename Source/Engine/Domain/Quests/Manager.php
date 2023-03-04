@@ -98,7 +98,7 @@ class Manager extends DomainManager
             'start' => date('Y-m-d H:i:s'),
             'finish' => date('Y-m-d H:i:s'),
             'status' => Statuses::TODO,
-            'type' => Types::MILESTONE,
+            'type' => Types::PROTOCOLS,
             'data' => '{}'
         ]);
     }
