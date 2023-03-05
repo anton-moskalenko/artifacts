@@ -14,7 +14,7 @@ class Method extends SuperMethod
 
         $entity->setTitle(self::getParameter('title'));
         $entity->setProgram(self::getParameter('program'));
-        $entity->setGoal(self::getParameter('goal'));
+        $entity->setUrl(self::getParameter('url'));
         $entity->setStart(self::getParameter('start'));
         $entity->setFinish(self::getParameter('finish'));
         $entity->setStatus(self::getParameter('status'));
