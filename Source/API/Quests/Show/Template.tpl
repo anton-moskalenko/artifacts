@@ -28,6 +28,14 @@
         display: block;
     }
 </style>
+
+<div style="text-align: center; background-color: #fff4cb; padding: 5px;">
+    <h3>Today's total time: <?php echo $collection->getPeriod(); ?></h3>
+    <?php foreach($collection->groupCount() as $type => $count): ?>
+    <?php echo $types[$type]; ?>: <?php echo $count; ?>;
+    <?php endforeach; ?>
+</div>
+
 <table id="table-road">
 
     <?php foreach($group as $key_dt => $collection): ?>
