@@ -3,13 +3,17 @@
 namespace Liloi\Nexus\Engine\Domain\Config;
 
 use Liloi\Tools\Entity as AbstractEntity;
-use Liloi\Stylo\Parser;
 
 /**
  * @todo: add tests
  */
 class Entity extends AbstractEntity
 {
+    /**
+     * Get database tuple key.
+     *
+     * @return string
+     */
     public function getKey(): string
     {
         return $this->getField('key_config');

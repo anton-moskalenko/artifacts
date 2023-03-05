@@ -2,10 +2,10 @@
 
 namespace Liloi\Nexus\Engine\Domain;
 
-use Liloi\Tools\Manager as AbstractManager;
 use Liloi\Config\Pool;
-use Liloi\Tools\Data\MySql\Connection;
 use Liloi\Tools\Data\MySql\Adapter;
+use Liloi\Tools\Data\MySql\Connection;
+use Liloi\Tools\Manager as AbstractManager;
 
 class Manager extends AbstractManager
 {
@@ -16,6 +16,11 @@ class Manager extends AbstractManager
      */
     static private Pool $config;
 
+    /**
+     * Database adapter.
+     *
+     * @var Adapter|null
+     */
     static private ?Adapter $adapter = null;
 
     /**
@@ -37,11 +42,21 @@ class Manager extends AbstractManager
         static::$config = $config;
     }
 
+    /**
+     * Get config database table prefix.
+     *
+     * @return string
+     */
     public static function getTablePrefix(): string
     {
         return self::getConfig()->get('prefix');
     }
 
+    /**
+     * Get database adapter (lazy).
+     *
+     * @return Adapter
+     */
     public static function getAdapter(): Adapter
     {
         if(is_null(self::$adapter))
@@ -55,6 +70,9 @@ class Manager extends AbstractManager
                 $connection['password']
             ));
 
+            // @todo: check for errors.
+
+            // @todo: include database config into adapter.
             mysqli_set_charset(self::$adapter->getConnection()->get(), 'UTF8');
         }
 

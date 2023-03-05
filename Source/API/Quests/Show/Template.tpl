@@ -66,11 +66,12 @@
                             <span class="<?php echo $entity->getStatusClass(); ?>">&#9724;</span>
                             <span class="tooltiptext">
                                 <?php echo $entity->getKey(); ?><br/>
+                                <?php echo $entity->getTypeCaption(); ?><br/>
                                 <a href="<?php echo $entity->getUrl(); ?>" target="_blank">Link</a>
                             </span>
                         </div>
                         &emsp;
-                        <?php echo $entity->getTitle(); ?> (<?php echo $entity->getTypeCaption(); ?>)
+                        <?php echo $entity->getTitle(); ?>
                     </td>
                     <td style="text-align: right;">
                         <a href="javascript:void(0)" onclick="API.Quests.edit('<?php echo $entity->getKey(); ?>');">Edit</a> &diams;
