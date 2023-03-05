@@ -23,7 +23,7 @@ class Manager extends DomainManager
         $rows = self::getAdapter()->getArray(sprintf(
             'select * from %s where start <= "%s" order by start desc limit 100;',
             $name,
-            gmdate('Y-m-d 23:59:59', strtotime($dt))
+            date('Y-m-d 23:59:59', strtotime($dt))
         ));
 
         $collection = new Collection();
