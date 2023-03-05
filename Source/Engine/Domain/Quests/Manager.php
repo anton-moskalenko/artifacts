@@ -15,7 +15,7 @@ class Manager extends DomainManager
     {
         if(is_null($dt))
         {
-            $dt = date('Y-m-d 00:00:00');
+            $dt = gmdate('Y-m-d 00:00:00');
         }
 
         $name = self::getTableName();
@@ -23,7 +23,7 @@ class Manager extends DomainManager
         $rows = self::getAdapter()->getArray(sprintf(
             'select * from %s where start <= "%s" order by start desc limit 100;',
             $name,
-            date('Y-m-d 23:59:59', strtotime($dt))
+            gmdate('Y-m-d 23:59:59', strtotime($dt))
         ));
 
         $collection = new Collection();
@@ -74,7 +74,7 @@ class Manager extends DomainManager
             $name
         ));
 
-        $key_quest = date('Y:W:N:0');
+        $key_quest = gmdate('Y:W:N:0');
 
         if($key_quest_previous)
         {
@@ -95,8 +95,8 @@ class Manager extends DomainManager
             'title' => 'Enter the title',
             'program' => '// comment',
             'url' => 'https://liloi.com.ua',
-            'start' => date('Y-m-d H:i:s'),
-            'finish' => date('Y-m-d H:i:s'),
+            'start' => gmdate('Y-m-d H:i:s'),
+            'finish' => gmdate('Y-m-d H:i:s'),
             'status' => Statuses::TODO,
             'type' => Types::PROTOCOLS,
             'data' => '{}'
@@ -111,11 +111,11 @@ class Manager extends DomainManager
 
         for($delta=-1;$delta<=72;$delta++)
         {
-            $key_dt = date('y-m-d-H', strtotime("-$delta hour"));
+            $key_dt = gmdate('y-m-d-H', strtotime("-$delta hour"));
             $group[$key_dt] = [];
             $group[$key_dt][] = Entity::create([
                 'virtual' => [
-                    'time' => date('G', strtotime("-$delta hour"))
+                    'time' => gmdate('G', strtotime("-$delta hour"))
                 ]
             ]);
         }
@@ -123,13 +123,13 @@ class Manager extends DomainManager
         $rows = self::getAdapter()->getArray(sprintf(
             'select * from %s where start between "%s" and "%s" order by start asc limit 100;',
             $name,
-            date('Y-m-d H:i:s', strtotime('-72 hour')),
-            date('Y-m-d H:i:s', strtotime('1 hour')),
+            gmdate('Y-m-d H:i:s', strtotime('-72 hour')),
+            gmdate('Y-m-d H:i:s', strtotime('1 hour')),
         ));
 
         foreach ($rows as $row)
         {
-            $key_dt = date('y-m-d-H', strtotime($row['start']));
+            $key_dt = gmdate('y-m-d-H', strtotime($row['start']));
 //            $group[$key_dt][] = Entity::create($row);
             array_unshift($group[$key_dt], Entity::create($row));
         }

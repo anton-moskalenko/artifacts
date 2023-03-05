@@ -24,11 +24,11 @@
         <tr><td>Program</td><td><textarea name="program"><?php echo $entity->getProgram(); ?></textarea></td></tr>
         <tr><td>Start</td><td>
             <input type="text" name="start" value="<?php echo $entity->getStart(); ?>"/>
-            <a href="javascript:void(0)" onclick="$('[name=start]').val('<?php echo date('Y-m-d H:i:s'); ?>');">Now</a>
+            <a href="javascript:void(0)" onclick="$('[name=start]').val('<?php echo gmdate('Y-m-d H:i:s'); ?>');">Now</a>
         </td></tr>
         <tr><td>Finish</td><td>
             <input type="text" name="finish" value="<?php echo $entity->getFinish(); ?>"/>
-            <a href="javascript:void(0)" onclick="$('[name=finish]').val('<?php echo date('Y-m-d H:i:s'); ?>');">Now</a>
+            <a href="javascript:void(0)" onclick="$('[name=finish]').val('<?php echo gmdate('Y-m-d H:i:s'); ?>');">Now</a>
         </td></tr>
         <tr><td>Type</td><td>
             <select name="type">
