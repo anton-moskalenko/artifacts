@@ -41,6 +41,7 @@ class Entity extends AbstractEntity
 
     public function isVirtual(): bool
     {
+
         return isset($this->data['virtual']);
     }
 
@@ -57,6 +58,12 @@ class Entity extends AbstractEntity
     public function getStatusCaption(): string
     {
         return Statuses::$list[$this->getStatus()];
+    }
+
+    public function getStatusClass(): string
+    {
+        $status = strtolower($this->getStatusCaption());
+        return str_replace(' ', '-', $status);
     }
 
     public function save(): void

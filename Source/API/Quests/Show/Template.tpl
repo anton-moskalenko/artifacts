@@ -39,7 +39,10 @@
                     <td></td>
                     <td style="text-align: right;">_</td>
                     <td class="road"></td>
-                    <td><?php echo $entity->getTitle(); ?> (<?php echo $entity->getTypeCaption(); ?>/<?php echo $entity->getStatusCaption(); ?>)</td>
+                    <td>
+                        <span class="<?php echo $entity->getStatusClass(); ?>">&#9724;</span>
+                        <?php echo $entity->getTitle(); ?> (<?php echo $entity->getTypeCaption(); ?>)
+                    </td>
                     <td style="text-align: right;">
                         <a href="javascript:void(0)" onclick="API.Quests.edit('<?php echo $entity->getKey(); ?>');">Edit</a> &diams;
                         <a href="javascript:void(0)" onclick="API.Quests.remove('<?php echo $entity->getKey(); ?>');">Remove</a>
