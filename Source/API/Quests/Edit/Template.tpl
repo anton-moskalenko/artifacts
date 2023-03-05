@@ -20,7 +20,7 @@
             <th>Value</th>
         </tr>
         <tr><td>Title</td><td><input type="text" name="title" value="<?php echo $entity->getTitle(); ?>"/></td></tr>
-        <tr><td>Goad</td><td><input type="text" name="goal" value="<?php echo $entity->getGoal(); ?>"/></td></tr>
+        <tr><td>Goal</td><td><input type="text" name="goal" value="<?php echo $entity->getGoal(); ?>"/></td></tr>
         <tr><td>Program</td><td><textarea name="program"><?php echo $entity->getProgram(); ?></textarea></td></tr>
         <tr><td>Start</td><td>
             <input type="text" name="start" value="<?php echo $entity->getStart(); ?>"/>
