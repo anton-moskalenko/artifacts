@@ -14,6 +14,7 @@ use Liloi\Tools\Entity as AbstractEntity;
  * @method void setTitle(string $value)
  * @method void setProgram(string $value)
  * @method void setGoal(string $value)
+ * @method string getType()
  * @method void setType(string $value)
  * @method void setData(string $value)
  *
@@ -46,6 +47,16 @@ class Entity extends AbstractEntity
     public function getVirtual(string $key)
     {
         return $this->data['virtual'][$key];
+    }
+
+    public function getTypeCaption(): string
+    {
+        return Types::$list[$this->getType()];
+    }
+
+    public function getStatusCaption(): string
+    {
+        return Statuses::$list[$this->getStatus()];
     }
 
     public function save(): void
