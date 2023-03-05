@@ -13,6 +13,20 @@
         background-size: 30%;
         opacity: 0.5;
     }
+
+    .hint .tooltiptext
+    {
+        display: none;
+        position: absolute;
+        background-color: white;
+        border: black 1px solid;
+        padding: 2px;
+    }
+
+    .hint:hover .tooltiptext
+    {
+        display: block;
+    }
 </style>
 <table id="table-road">
 
@@ -40,7 +54,11 @@
                     <td style="text-align: right;">_</td>
                     <td class="road"></td>
                     <td>
-                        <span class="<?php echo $entity->getStatusClass(); ?>">&#9724;</span>
+                        <div class="hint" style="float: left;">
+                            <span class="<?php echo $entity->getStatusClass(); ?>">&#9724;</span>
+                            <span class="tooltiptext"><?php echo $entity->getKey(); ?></span>
+                        </div>
+                        &emsp;
                         <?php echo $entity->getTitle(); ?> (<?php echo $entity->getTypeCaption(); ?>)
                     </td>
                     <td style="text-align: right;">
