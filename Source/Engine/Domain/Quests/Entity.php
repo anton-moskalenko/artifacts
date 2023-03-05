@@ -13,7 +13,7 @@ use Liloi\Tools\Entity as AbstractEntity;
  * @method void setStatus(string $value)
  * @method void setTitle(string $value)
  * @method void setProgram(string $value)
- * @method void setGoal(string $value)
+ * @method void setUrl(string $value)
  * @method string getType()
  * @method void setType(string $value)
  * @method void setData(string $value)

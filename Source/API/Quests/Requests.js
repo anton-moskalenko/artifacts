@@ -65,7 +65,7 @@ API.Quests = {
             'key': key,
             'title': jq_block.find('[name="title"]').val(),
             'program': jq_block.find('[name="program"]').val(),
-            'goal': jq_block.find('[name="goal"]').val(),
+            'url': jq_block.find('[name="url"]').val(),
             'start': jq_block.find('[name="start"]').val(),
             'finish': jq_block.find('[name="finish"]').val(),
             'status': jq_block.find('[name="status"]').val(),

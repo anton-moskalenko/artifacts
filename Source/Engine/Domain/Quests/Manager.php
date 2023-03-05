@@ -94,7 +94,7 @@ class Manager extends DomainManager
             'key_quest' => $key_quest,
             'title' => 'Enter the title',
             'program' => '// comment',
-            'goal' => 'Enter the goal',
+            'url' => 'https://liloi.com.ua',
             'start' => date('Y-m-d H:i:s'),
             'finish' => date('Y-m-d H:i:s'),
             'status' => Statuses::TODO,

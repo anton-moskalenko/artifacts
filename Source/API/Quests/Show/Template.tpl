@@ -56,7 +56,10 @@
                     <td>
                         <div class="hint" style="float: left;">
                             <span class="<?php echo $entity->getStatusClass(); ?>">&#9724;</span>
-                            <span class="tooltiptext"><?php echo $entity->getKey(); ?></span>
+                            <span class="tooltiptext">
+                                <?php echo $entity->getKey(); ?><br/>
+                                <a href="<?php echo $entity->getUrl(); ?>" target="_blank">Link</a>
+                            </span>
                         </div>
                         &emsp;
                         <?php echo $entity->getTitle(); ?> (<?php echo $entity->getTypeCaption(); ?>)
