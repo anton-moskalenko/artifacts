@@ -25,6 +25,8 @@
                     <td style="text-align: right;">
                         <?php if($entity->getVirtual('time') % 3 == 0): ?>
                             <img src="/vendor/anton-moskalenko/nexus/Pool/Images/Milestone.png" alt="<?php echo $key_dt; ?>" width="30" />
+                        <?php else: ?>
+                            _
                         <?php endif; ?>
                     </td>
                     <td class="road"></td>
@@ -35,7 +37,7 @@
             <?php else: ?>
                 <tr data-dt="<?php echo $key_dt; ?>">
                     <td></td>
-                    <td></td>
+                    <td style="text-align: right;">_</td>
                     <td class="road"></td>
                     <td><?php echo $entity->getTitle(); ?> (<?php echo $entity->getTypeCaption(); ?>/<?php echo $entity->getStatusCaption(); ?>)</td>
                     <td style="text-align: right;">
