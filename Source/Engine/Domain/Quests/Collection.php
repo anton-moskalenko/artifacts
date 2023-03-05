@@ -11,6 +11,10 @@ use Liloi\Tools\Collection as AbstractCollection;
  */
 class Collection extends AbstractCollection
 {
+    /**
+     * Get daily mark.
+     * @return string
+     */
     public function getPeriod(): string
     {
         $total = 0;
@@ -31,6 +35,11 @@ class Collection extends AbstractCollection
         return sprintf('(%s) %s:%s:%s (%s%%)', $total, $hours, $minutes, $seconds, $percent);
     }
 
+    /**
+     * Get quest count per each type.
+     *
+     * @return array
+     */
     public function groupCount(): array
     {
         $list = array_combine(array_keys(Types::$list), [0,0,0,0,0,0,0]);

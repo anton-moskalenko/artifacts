@@ -12,7 +12,6 @@ body
 h1,h2,h3,h4,h5
 {
     margin: 0;
-    /*text-align: center;*/
 }
 
 table th,
@@ -30,49 +29,43 @@ a
 #menu
 {
     background-color: #ececec;
-    width: 100px;
     text-align: center;
+    width: 100px;
 }
 
 #header
 {
-    /*height: 100px;*/
-    height: 30px;
-    width: 100%;
-    /*background: rgb(255,255,255);*/
-    /*background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(190,190,190,1) 100%);*/
     background-color: #ececec;
-    text-align: center;
-    /*font-size: xx-large;*/
+    height: 30px;
     padding-top: 5px;
+    text-align: center;
+    width: 100%;
 }
 
 #footer
 {
-    height: 20px;
-    width: 100%;
-    position:fixed;
-    bottom:0;
-    /*background: rgb(255,255,255);*/
-    /*background: linear-gradient(0deg, rgba(190,190,190,1) 0%, rgba(255,255,255,1) 100%);*/
     background-color: #ececec;
-    text-align: center;
+    bottom:0;
     font-size: large;
+    height: 20px;
+    position:fixed;
+    text-align: center;
+    width: 100%;
 }
 
 #page
 {
+    background-color: #ececec;
+    display: none;
     height: 80%;
     overflow-y: scroll;
     width: 70%;
-    display: none;
-    background-color: #ececec;
 }
 
 #map
 {
-    height: 80%;
     background-color: #eeffef;
+    height: 80%;
 }
 
 #minor
@@ -80,7 +73,7 @@ a
     font-size: large;
 }
 
-.to-do {color: #a3a3a3;}
+.failure {color: #ff0000;}
 .in-hand {color: #ffff00;}
 .success {color: #00ff00;}
-.failure {color: #ff0000;}
+.to-do {color: #a3a3a3;}

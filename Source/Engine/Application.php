@@ -14,13 +14,12 @@ class Application extends Conceptual
      */
     public function compile(): string
     {
+        // If API requested.
         if(isset($_POST['method']))
         {
             return Tree::execute();
         }
 
-        return $this->render(__DIR__ . '/Layout.tpl', [
-
-        ]);
+        return $this->render(__DIR__ . '/Layout.tpl');
     }
 }

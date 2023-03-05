@@ -6,6 +6,11 @@ use Liloi\Nexus\Engine\Domain\Manager as DomainManager;
 
 class Manager extends DomainManager
 {
+    /**
+     * Get table name.
+     *
+     * @return string
+     */
     public static function getTableName(): string
     {
         return self::getTablePrefix() . 'quests';
