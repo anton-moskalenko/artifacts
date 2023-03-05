@@ -80,7 +80,7 @@ a
     font-size: large;
 }
 
-.in-hand {background-color: #ffffa9;}
-.success {background-color: #c2ffc3;}
-.failure {background-color: #fdd4d4;}
-.to-do {background-color: #cdcdcd;}
+.to-do {color: #a3a3a3;}
+.in-hand {color: #ffff00;}
+.success {color: #00ff00;}
+.failure {color: #ff0000;}
