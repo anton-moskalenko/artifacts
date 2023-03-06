@@ -45,11 +45,10 @@
                 <tr data-dt="<?php echo $key_dt; ?>">
                     <td></td>
                     <td style="text-align: right;">
-                        <?php if($entity->getVirtual('time') % 3 == 0): ?>
+                        <div class="hint" style="float: right;">
                             <img src="/vendor/anton-moskalenko/nexus/Pool/Images/Milestone.png" alt="<?php echo $key_dt; ?>" width="30" />
-                        <?php else: ?>
-                            _
-                        <?php endif; ?>
+                            <span class="tooltiptext"><?php echo $entity->getVirtual('time'); ?></span>
+                        </div>
                     </td>
                     <td class="road"></td>
                     <td></td>

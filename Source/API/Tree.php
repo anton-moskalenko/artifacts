@@ -12,7 +12,7 @@ class Tree
 {
     static ?Manager $manager = null;
 
-    static public function collect(): void
+    public static function collect(): void
     {
         $manager = new Manager();
 
