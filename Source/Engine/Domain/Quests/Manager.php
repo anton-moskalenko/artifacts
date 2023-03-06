@@ -135,7 +135,6 @@ class Manager extends DomainManager
         foreach ($rows as $row)
         {
             $key_dt = gmdate('y-m-d-H', strtotime($row['start']));
-//            $group[$key_dt][] = Entity::create($row);
             array_unshift($group[$key_dt], Entity::create($row));
         }
 
