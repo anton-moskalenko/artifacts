@@ -16,19 +16,20 @@ class Manager extends DomainManager
         return self::getTablePrefix() . 'quests';
     }
 
-    public static function loadCollection(?string $dt = null): Collection
+    public static function loadCollection(?string $gmt_timestamp = null): Collection
     {
-        if(is_null($dt))
+        if(is_null($gmt_timestamp))
         {
-            $dt = gmdate('Y-m-d 00:00:00');
+            $gmt_timestamp = gmdate('Y-m-d 00:00:00');
         }
 
         $name = self::getTableName();
 
         $rows = self::getAdapter()->getArray(sprintf(
-            'select * from %s where start <= "%s" order by start desc limit 100;',
+            'select * from %s where start between "%s" and "%s" order by start desc limit 100;',
             $name,
-            date('Y-m-d 23:59:59', strtotime($dt))
+            date('Y-m-d 00:00:00', strtotime($gmt_timestamp)),
+            date('Y-m-d 23:59:59', strtotime($gmt_timestamp))
         ));
 
         $collection = new Collection();
