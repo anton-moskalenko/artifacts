@@ -12,13 +12,14 @@
     </head>
     <body>
         <div id="header">
+            <a href="javascript::void(0)" onclick="$('#page').toggle();">Info</a> &diams;
+            <a href="javascript::void(0)" onclick="API.Quests.create();">Create</a> &diams;
             <input type="date" id="current-date" value="<?php echo gmdate("Y-m-d"); ?>">
         </div>
         <table style="width: 100%;height: 96%;">
             <tr>
                 <td id="menu">
-                    <a href="javascript::void(0)" onclick="$('#page').toggle();">Info</a><br/>
-                    <a href="javascript::void(0)" onclick="API.Quests.create();">Create</a><br/>
+
                 </td>
                 <td id="map">
 
