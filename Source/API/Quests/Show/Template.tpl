@@ -40,7 +40,6 @@
 
     <?php foreach($group as $key_dt => $collection): ?>
         <?php foreach($collection as $entity): ?>
-
             <?php if($entity->isVirtual()): ?>
                 <tr data-dt="<?php echo $key_dt; ?>">
                     <td></td>
