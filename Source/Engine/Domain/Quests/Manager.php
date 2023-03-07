@@ -115,7 +115,7 @@ class Manager extends DomainManager
 
         $group = [];
 
-        for($delta=-1;$delta<=72;$delta++)
+        for($delta=0;$delta<=72;$delta++)
         {
             $key_dt = gmdate('y-m-d-H', strtotime("-$delta hour"));
             $group[$key_dt] = [];
@@ -130,12 +130,12 @@ class Manager extends DomainManager
             'select * from %s where start between "%s" and "%s" order by start asc limit 100;',
             $name,
             gmdate('Y-m-d H:i:s', strtotime('-72 hour')),
-            gmdate('Y-m-d H:i:s', strtotime('1 hour')),
+            gmdate('Y-m-d H:i:s'),
         ));
 
         foreach ($rows as $row)
         {
-            $key_dt = gmdate('y-m-d-H', strtotime($row['start']));
+            $key_dt = date('y-m-d-H', strtotime($row['start']));
             array_unshift($group[$key_dt], Entity::create($row));
         }
 
