@@ -63,7 +63,7 @@
                         <div class="hint" style="float: left;">
                             <span class="<?php echo $entity->getStatusClass(); ?>">&#9724;</span>
                             <span class="tooltiptext">
-                                <?php echo $entity->getKey(); ?><br/>
+                                <a href="javascript:void(0)" onclick="Command.copy('<?php echo $entity->getKey(); ?>')"><?php echo $entity->getKey(); ?></a><br/>
                                 <?php echo $entity->getTypeCaption(); ?><br/>
                                 <a href="<?php echo $entity->getUrl(); ?>" target="_blank">Link</a>
                             </span>
