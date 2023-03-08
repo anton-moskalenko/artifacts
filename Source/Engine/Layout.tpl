@@ -5,9 +5,8 @@
         <script><?php echo file_get_contents(ROOT_DIR . '/vendor/anton-moskalenko/rune-framework/Frontside/Library/Underscore.min.js'); ?></script>
         <script><?php echo file_get_contents(ROOT_DIR . '/vendor/anton-moskalenko/rune-framework/Frontside/Library/Backbone.min.js'); ?></script>
         <script><?php echo file_get_contents(ROOT_DIR . '/vendor/anton-moskalenko/rune-api/Client/API.js'); ?></script>
-        <script><?php echo file_get_contents(ROOT_DIR . '/vendor/anton-moskalenko/nexus/Source/API/Quests/Requests.js'); ?></script>
-
-        <style><?php echo file_get_contents(ROOT_DIR . '/vendor/anton-moskalenko/nexus/Source/Engine/Manager.css'); ?></style>
+        <script><?php echo file_get_contents(ROOT_DIR . '/Source/API/Quests/Requests.js'); ?></script>
+        <style><?php echo file_get_contents(ROOT_DIR . '/Source/Engine/Manager.css'); ?></style>
         <title>Nexus - <?php echo gmdate('Y-m-d H:i:s'); ?></title>
     </head>
     <body>
@@ -18,9 +17,6 @@
         </div>
         <table style="width: 100%;height: 96%;">
             <tr>
-                <td id="menu">
-
-                </td>
                 <td id="map">
 
                 </td>
@@ -29,10 +25,6 @@
                 </td>
             </tr>
         </table>
-
-        <div id="footer">
-
-        </div>
         <script>
             API.Quests.show();
         </script>
