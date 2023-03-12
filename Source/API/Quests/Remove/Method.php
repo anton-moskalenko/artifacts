@@ -1,11 +1,11 @@
 <?php
 
-namespace Liloi\Nexus\API\Quests\Remove;
+namespace Liloi\Artifacts\API\Quests\Remove;
 
 use Liloi\API\Response;
-use Liloi\Nexus\API\Method as SuperMethod;
-use Liloi\Nexus\Engine\Domain\Quests\Manager;
-use Liloi\Nexus\Engine\Domain\Quests\Statuses;
+use Liloi\Artifacts\API\Method as SuperMethod;
+use Liloi\Artifacts\Engine\Domain\Quests\Manager;
+use Liloi\Artifacts\Engine\Domain\Quests\Statuses;
 
 class Method extends SuperMethod
 {

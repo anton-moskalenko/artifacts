@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\Nexus\API;
+namespace Liloi\Artifacts\API;
 
 use Liloi\API\Manager;
 use Liloi\API\Method;
@@ -18,11 +18,11 @@ class Tree
 
         // @todo: add automatic API method collect.
 
-        $manager->add(new Method('Nexus.Quests.Show', '\Liloi\Nexus\API\Quests\Show\Method::execute'));
-        $manager->add(new Method('Nexus.Quests.Create', '\Liloi\Nexus\API\Quests\Create\Method::execute'));
-        $manager->add(new Method('Nexus.Quests.Remove', '\Liloi\Nexus\API\Quests\Remove\Method::execute'));
-        $manager->add(new Method('Nexus.Quests.Edit', '\Liloi\Nexus\API\Quests\Edit\Method::execute'));
-        $manager->add(new Method('Nexus.Quests.Save', '\Liloi\Nexus\API\Quests\Save\Method::execute'));
+        $manager->add(new Method('Nexus.Quests.Show', '\Liloi\Artifacts\API\Quests\Show\Method::execute'));
+        $manager->add(new Method('Nexus.Quests.Create', '\Liloi\Artifacts\API\Quests\Create\Method::execute'));
+        $manager->add(new Method('Nexus.Quests.Remove', '\Liloi\Artifacts\API\Quests\Remove\Method::execute'));
+        $manager->add(new Method('Nexus.Quests.Edit', '\Liloi\Artifacts\API\Quests\Edit\Method::execute'));
+        $manager->add(new Method('Nexus.Quests.Save', '\Liloi\Artifacts\API\Quests\Save\Method::execute'));
 
         self::$manager = $manager;
     }
