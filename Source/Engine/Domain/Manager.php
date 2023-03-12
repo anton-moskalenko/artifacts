@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\Nexus\Engine\Domain;
+namespace Liloi\Artifacts\Engine\Domain;
 
 use Liloi\Config\Pool;
 use Liloi\Tools\Data\MySql\Adapter;

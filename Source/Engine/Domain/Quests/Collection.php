@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\Nexus\Engine\Domain\Quests;
+namespace Liloi\Artifacts\Engine\Domain\Quests;
 
 use Liloi\Tools\Collection as AbstractCollection;
 

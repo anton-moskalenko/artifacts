@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\Nexus\Engine\Domain\Config;
+namespace Liloi\Artifacts\Engine\Domain\Config;
 
 use Liloi\Tools\Entity as AbstractEntity;
 

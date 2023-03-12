@@ -1,10 +1,10 @@
 <?php
 
-namespace Liloi\Nexus\API\Quests\Save;
+namespace Liloi\Artifacts\API\Quests\Save;
 
 use Liloi\API\Response;
-use Liloi\Nexus\API\Method as SuperMethod;
-use Liloi\Nexus\Engine\Domain\Quests\Manager;
+use Liloi\Artifacts\API\Method as SuperMethod;
+use Liloi\Artifacts\Engine\Domain\Quests\Manager;
 
 class Method extends SuperMethod
 {

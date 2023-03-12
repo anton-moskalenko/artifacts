@@ -1,10 +1,10 @@
 <?php
 
-namespace Liloi\Nexus\Engine;
+namespace Liloi\Artifacts\Engine;
 
 use Liloi\Config\Pool;
-use Liloi\Nexus\API\Tree;
-use Liloi\Nexus\Engine\Domain\Manager;
+use Liloi\Artifacts\API\Tree;
+use Liloi\Artifacts\Engine\Domain\Manager;
 use Rune\Application\Conceptual as ConceptualApplication;
 
 /**

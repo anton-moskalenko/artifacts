@@ -1,8 +1,8 @@
 <?php
 
-namespace Liloi\Nexus\Engine\Domain\Quests;
+namespace Liloi\Artifacts\Engine\Domain\Quests;
 
-use Liloi\Nexus\Engine\Domain\Manager as DomainManager;
+use Liloi\Artifacts\Engine\Domain\Manager as DomainManager;
 
 class Manager extends DomainManager
 {

@@ -7,7 +7,7 @@
 
     .road
     {
-        background-image: url("/vendor/anton-moskalenko/nexus/Pool/Images/Road.png");
+        background-image: url("/Pool/Images/Road.png");
         width: 200px;
         height: 58px;
         background-size: 30%;
@@ -45,7 +45,7 @@
                     <td></td>
                     <td style="text-align: right;">
                         <div class="hint" style="float: right;">
-                            <img src="/vendor/anton-moskalenko/nexus/Pool/Images/Milestone.png" alt="<?php echo $key_dt; ?>" width="30" />
+                            <img src="/Pool/Images/Milestone.png" alt="<?php echo $key_dt; ?>" width="30" />
                             <span class="tooltiptext"><?php echo $entity->getVirtual('time'); ?></span>
                         </div>
                     </td>
